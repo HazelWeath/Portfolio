@@ -16,3 +16,31 @@ window.onclick = function(event) {
   });
 };
 
+
+
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/xyzlggvo", {
+    method: "POST",
+    body: data,
+    headers: {
+      Accept: "application/json"
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = "thank-you.html";
+    } else {
+      alert("Erreur lors de l'envoi du message.");
+    }
+  })
+  .catch(() => {
+    alert("Erreur réseau.");
+  });
+});
+

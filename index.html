@@ -80,16 +80,12 @@
 
 	<section id="contact" class="container contact-section">
 		<h1>Contact</h1>
-		<form action="https://formspree.io/f/xyzlggvo" method="POST" class="contact-form">
-			<input type="hidden" name="_redirect" value="thank-you.html">
-			<label for="email">Votre email :</label>
-			<input type="email" name="email" id="email" placeholder="Votre email" required>
-
-			<label for="message">Votre message :</label>
-			<textarea name="message" id="message" placeholder="Votre message" rows="5" required></textarea>
-			
-			<button type="submit">Envoyer</button>
+		<form id="contact-form" method="POST">
+		  <input type="email" name="email" placeholder="Votre email" required>
+		  <textarea name="message" placeholder="Votre message" required></textarea>
+		  <button type="submit">Envoyer</button>
 		</form>
+
 	</section>
 
 
