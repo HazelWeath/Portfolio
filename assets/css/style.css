@@ -3,8 +3,6 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #fff;
   padding-top: 80px; /* espace pour la navbar fixe */
 }
 
@@ -18,12 +16,28 @@ html {
   padding: 2em 1em;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* === Liens globaux === */
+a {
+  color: orange;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #FF7900;
+  text-decoration: underline;
+}
+
 /* === Navbar === */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000;
   z-index: 999;
   padding: 1em 0;
   border-bottom: 2px solid #FF7900;
@@ -39,13 +53,7 @@ html {
 }
 
 .navbar a {
-  color: #fff;
-  text-decoration: none;
   font-weight: bold;
-}
-
-.navbar a:hover {
-  color: #FF7900;
 }
 
 /* === Accueil === */
@@ -54,7 +62,7 @@ html {
   padding: 4em 1em;
 }
 
-.accueil .btn {
+.btn {
   margin-top: 1em;
   background-color: #FF7900;
   color: #000;
@@ -63,9 +71,10 @@ html {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.accueil .btn:hover {
+.btn:hover {
   background-color: #fff;
   color: #FF7900;
 }
@@ -95,7 +104,6 @@ html {
 }
 
 .card {
-  background-color: #111;
   border: 1px solid #FF7900;
   padding: 1em;
   width: 300px;
@@ -104,22 +112,6 @@ html {
 }
 
 .card h3 {
-  color: #FF7900;
-}
-
-.card .btn {
-  margin-top: 1em;
-  background-color: #FF7900;
-  color: #000;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.card .btn:hover {
-  background-color: #fff;
   color: #FF7900;
 }
 
@@ -137,13 +129,11 @@ html {
 }
 
 .modal-content {
-  background-color: #111;
   margin: 10% auto;
   padding: 2em;
   border: 1px solid #FF7900;
   width: 80%;
   max-width: 600px;
-  color: #fff;
   border-radius: 10px;
 }
 
@@ -155,51 +145,11 @@ html {
   cursor: pointer;
 }
 
-/* === Compétences === */
-.skills {
-  margin-top: 2em;
-}
-
-.skill {
-  margin-bottom: 1em;
-}
-
-.bar {
-  background-color: #333;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.fill {
-  background-color: #FF7900;
-  height: 100%;
-}
-
 /* === Contact === */
 .contact-section {
   text-align: center;
   padding: 3em 1em;
 }
-
-.contact-section ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1em;
-}
-
-.contact-section li {
-  margin: 0.5em 0;
-  font-size: 1.1em;
-}
-
-
-h1 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-/* Formulaire de contact */
 
 .contact-form {
   display: flex;
@@ -210,7 +160,6 @@ h1 {
 }
 
 .contact-form label {
-  color: #fff;
   font-weight: bold;
 }
 
@@ -218,84 +167,10 @@ h1 {
 .contact-form textarea {
   width: 300px;
   padding: 0.8em;
-  border: none;
   border-radius: 5px;
-  background-color: #222;
-  color: #fff;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-}
-
-.contact-form button {
-  width: 150px;
-  background-color: #FF7900;
-  color: #000;
-  padding: 0.8em;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #fff;
-  color: #FF7900;
-}
-
-
-/* Pop up */
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background-color: #111;
-  margin: 10% auto;
-  padding: 2em;
-  border: 1px solid #FF7900;
-  width: 80%;
-  max-width: 600px;
-  color: #fff;
-  border-radius: 10px;
-}
-
-.close {
-  color: #FF7900;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    display: none;
-  }
-}
-
-.lien {
-  color: orange;
-  text-decoration: none; /* optionnel : enlève le soulignement */
-}
-
-.lien:hover {
-  color: #FF7900; /* un orange plus vif au survol */
-  text-decoration: underline;
-}
-
-
+/* === Compétences (tableau) === */
 .skills-section {
   padding: 3em 1em;
   text-align: center;
@@ -306,8 +181,6 @@ h1 {
   max-width: 1000px;
   margin: 2em auto;
   border-collapse: collapse;
-  background-color: #1a1a1a;
-  color: #fff;
   box-shadow: 0 0 15px rgba(255, 121, 0, 0.2);
 }
 
@@ -324,15 +197,8 @@ h1 {
   font-size: 1.1em;
 }
 
-.skills-table tr:nth-child(even) {
-  background-color: #2a2a2a;
-}
-
 /* Footer */
-
 .site-footer {
-  background-color: #1a1a1a;
-  color: #fff;
   padding: 1.5em 1em;
   text-align: center;
   font-size: 0.9em;
@@ -340,23 +206,76 @@ h1 {
   box-shadow: 0 -2px 10px rgba(255, 121, 0, 0.2);
 }
 
-/* Images dans les pop up*/
-
+/* Images dans les pop up */
 .popup {
   max-width: 90vw;
   max-height: 90vh;
   overflow: auto;
   padding: 1em;
-  background-color: #1a1a1a;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 121, 0, 0.3);
 }
 
 .popup-img {
   max-width: 100%;
-  max-height: 300px; /* ou 100% si tu veux qu’elle s’adapte à la hauteur */
+  max-height: 300px;
   object-fit: contain;
   display: block;
   margin: 0 auto 1em;
   border-radius: 8px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* === Thèmes === */
+body.light-theme {
+  background: #fff;
+  color: #000;
+}
+
+body.light-theme .navbar { background: #f7f7f7; }
+body.light-theme .card,
+body.light-theme .modal-content,
+body.light-theme .skills-table,
+body.light-theme .popup { background: #fff; color: #000; border-color: #ccc; }
+body.light-theme .site-footer { background: #f7f7f7; color: #000; }
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea { background: #fff; color: #000; border: 1px solid #ccc; }
+
+body.dark-theme {
+  background: #000;
+  color: #fff;
+}
+
+body.dark-theme .navbar { background: #000; }
+body.dark-theme .card,
+body.dark-theme .modal-content,
+body.dark-theme .skills-table,
+body.dark-theme .popup { background: #111; color: #fff; border-color: #444; }
+body.dark-theme .site-footer { background: #1a1a1a; color: #fff; }
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea { background: #222; color: #fff; border: 1px solid #444; }
+
+/* Bouton de thème */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 1px solid #FF7900;
+  color: #FF7900;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  background: #FF7900;
+  color: #000;
 }

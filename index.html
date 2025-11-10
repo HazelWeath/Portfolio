@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - GHARES Naïm</title>
-  <link rel="icon" type="image/vnd.icon" href=" assets/images/favicon.ico">
+  <title>Portfolio - Naïm Ghares</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/script.js" defer></script>
 </head>
-<body>
+<body class="light-theme">
+  <!-- Bouton de bascule de thème -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème"> Mode sombre</button>
 
   <nav class="navbar">
     <ul>
@@ -22,41 +24,41 @@
 
   <section id="accueil" class="container accueil">
     <h1>Bienvenue sur mon portfolio</h1>
-    <p>Je suis Naïm GHARES, étudiant en BUT Réseaux & Télécom, passionné par les réseaux, les maths et le développement.</p>
+    <p>Je suis Naïm Ghares, étudiant en BUT Réseaux & Télécommunications, passionné par les réseaux, les mathématiques et le développement.</p>
     <a href="assets/cv_naim_ghares.pdf" class="btn" download>Télécharger mon CV</a>
     <div class="contact">
       <p><strong>Téléphone :</strong> <a class="lien" href="tel:+33782235904">07 82 23 59 04</a></p>
-      <p><strong>Email :</strong><a class="lien" href="mailto:naimghares@gmail.com">naimghares@gmail.com</a></p>
+      <p><strong>Email :</strong> <a class="lien" href="mailto:naimghares@gmail.com">naimghares@gmail.com</a></p>
     </div>
   </section>
 
   <section id="parcours" class="container">
     <h1>Mon Parcours</h1>
-	<h2>Scolaire :</h2>
+    <h2>Scolaire :</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>2024 - BUT Réseaux & Télécom</h3>
-		<p>Option Cybersécurité ( à partir de la deuxième année</p>
+        <h3>2024 - BUT Réseaux & Télécommunications</h3>
+        <p>Option Cybersécurité (à partir de la deuxième année)</p>
         <p>Université de Tours (Site de Blois)</p>
       </div>
       <div class="timeline-item">
-        <h3>2021 - Bac Générale</h3>
-		<p>Spécialité Maths, Physique-chimie et NSI avec option Maths Expertes</p>
+        <h3>2021 - Bac Général</h3>
+        <p>Spécialités : Mathématiques, Physique-Chimie et NSI, avec option Mathématiques Expertes</p>
         <p>Lycée François Philibert Dessaignes</p>
       </div>
     </div>
-	
-	<h2>Professionnel :</h2>
+    
+    <h2>Professionnel :</h2>
     <div class="timeline">
       <div class="timeline-item">
         <h3>2025 - Orange France</h3>
-		<p>Poste : Chargé D'affaires Dissimulation et Coordination</p>
-        <p>Missions : Suivi de projets de dissimulation de réseaux (fibre, cuivre), coordination avec les collectivités et prestataires, gestion de planning et de budget.</p>
+        <p>Poste : Chargé d’affaires, Dissimulation et Coordination</p>
+        <p>Missions : Suivi de projets de dissimulation de réseaux (fibre, cuivre), coordination avec les collectivités et prestataires, gestion du planning et du budget.</p>
       </div>
       <div class="timeline-item">
-        <h3>2023 (été) - Hangar vente privée</h3>
-		<p>Poste : Vendeur</p>
-        <p>Missions : Conseil pour les clients, mise en rayons et rangement des rayons.</p>
+        <h3>2023 (été) - Hangar Vente Privée</h3>
+        <p>Poste : Vendeur</p>
+        <p>Missions : Conseil aux clients, mise en rayon et rangement des rayons.</p>
       </div>
     </div>
   </section>
@@ -64,138 +66,160 @@
   <section id="projets" class="container">
     <h1>Mes Projets</h1>
     <div class="grid">
-	
-	
-	
-	<!-------------------------------------- Projet 1 --------------------------------------!>
-	<div class="card">
-	  <h3>Concevoir le réseau informatique d’une petite entreprise</h3>
-	  <h4> Réseau </h4>
-	  
-	  <p>Dans ce projet, le but était de concevoir un réseau d'entreprise sur un logiciel 
-	  de simulation de réseaux tout en configurant les équipements en ligne de commande.</p>
-	  
-	  <button class="btn" onclick="openModal('modal1')">Voir plus</button>
-	</div>
+      <!-- Projet 1 -->
+      <div class="card">
+        <h3>Concevoir le réseau informatique d’une petite entreprise</h3>
+        <h4>Réseau</h4>
+        <p>Dans ce projet, l’objectif était de concevoir un réseau d’entreprise sur un logiciel 
+        de simulation de réseaux, tout en configurant les équipements en ligne de commande.</p>
+        <button class="btn" onclick="openModal('modal1')">Voir plus</button>
+      </div>
 
-	<div id="modal1" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closeModal('modal1')">&times;</span>
-			<h2>Description du projet :</h2><!-- &nbsp;&nbsp;&nbsp;&nbsp; sert aux alinéas--!>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;Ce projet a été entièrement réalisé à l’aide du logiciel de simulation Cisco Packet Tracer.
-			En respectant les contraintes du cahier des charges, l’objectif était de concevoir un réseau
-			informatique fonctionnel et sécurisé au maximum avec ce que l’on a vu en cours durant notre
-			première année. <br><br>
-			
-			&nbsp;&nbsp;&nbsp;&nbsp;Pour concevoir ce réseau d’entreprise, il a donc fallu suivre plusieurs 
-			étape importante à la création d’un réseau pour ne pas être perdu et faire trop de tache 
-			en même temps. Nous devions faire un rapport de projet à l’issue de ce projet pour montrer 
-			que l’on a bien compris tous ce que l’on a réalisé durant notre projet. Tout au long de ce 
-			projet, j’ai rencontré divers problème qu’ils a fallu que je règle par moi même et nous avions 
-			un cahier des charge très spécifique à respecter comme par exemple le création d’un réseau en
-			VLSM ou la mise en place de SSH.</p>
-			
-			<br><div class="popup">
-			  <img src="assets/images/SAE201.png" alt="Aperçu du projet" class="popup-img">
-			  <p>Réseau Crée avec Cisco Packet Tracer</p>
-			</div><br>
-			
-			<h2> Déroulé du projet : </h2>
-			
-			<p>&nbsp;&nbsp;&nbsp;&nbsp; En ce qui concerne le déroulement du projet,
-			il ne faut pas se lancer sans réfléchir un minimum au réseau que l’on va mettre 
-			en place. C’est pourquoi j’ai commencé par faire un document écrit qui me sert 
-			de brouillon, dans lequel j’ai renseigné toutes les informations de mon 
-			entreprise (nombre d’employés, nombre de salles, de routeurs, de switchs, etc.).<br><br>
-			
-			&nbsp;&nbsp;&nbsp;&nbsp; Ensuite, j’ai fait un plan de mon entreprise sur feuille 
-			pour voir ce qu’il serait judicieux de modifier ou de supprimer. Cette étape est,
-			selon moi, très importante, car elle permet d’avoir une vue plus générale du réseau,
-			de mieux le visualiser, et de savoir quels problèmes on est susceptible de rencontrer,
-			même si un imprévu peut vite arriver.<br><br>
-			
-			&nbsp;&nbsp;&nbsp;&nbsp; Enfin, il faut se lancer dans la réalisation du projet 
-			en créant le réseau sur Cisco Packet Tracer, étape par étape, sans se précipiter.
-			</p>
-			
-			<h2> Les apports de ce projet </h2>
-			<h4> Ce projet m’a permis de valider de nombreuses compétences vu en cours: </h4>
-			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp- Maitriser Cisco Packet Tracer<br>
-				&nbsp;&nbsp;&nbsp;&nbsp- Concevoir un réseau informatique opérationnel en sécurisant l'environnement<br>
-				&nbsp;&nbsp;&nbsp;&nbsp- Mettre en place des services réseaux pour les utilisateurs<br>
-				&nbsp;&nbsp;&nbsp;&nbsp- Configurer les fonctions de base du réseau local
-			</p>
-			<h4> Conclusion: </h4>
-			<p>
-				&nbsp;&nbsp;&nbsp;&nbspCe projet a été pour moi une bonne expérience en réseau, je me suis pas mal 
-				amusé à imaginer mon entreprise et à concevoir son réseau. Cependant, il reste beaucoup 
-				de points à améliorer dans mon réseau en raison de mon manque de connaissances et d’expérience tels que la sécurité.
-			</p>
-		</div>
-	</div>
-
-		<!-- Ajoute d'autres cartes (projet) ici -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <h2>Description du projet :</h2>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Ce projet a été entièrement réalisé à l’aide du logiciel de simulation Cisco Packet Tracer.
+          En respectant les contraintes du cahier des charges, l’objectif était de concevoir un réseau
+          informatique fonctionnel et sécurisé au maximum avec ce que nous avions vu en cours durant notre
+          première année. <br><br>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;Pour concevoir ce réseau d’entreprise, il a fallu suivre plusieurs 
+          étapes importantes afin de ne pas être perdu et éviter de réaliser trop de tâches en même temps. 
+          Nous devions rédiger un rapport de projet à l’issue de ce travail pour montrer 
+          que nous avions bien compris tout ce que nous avions réalisé. Tout au long de ce 
+          projet, j’ai rencontré divers problèmes qu’il a fallu résoudre par moi-même, et nous avions 
+          un cahier des charges très spécifique à respecter, comme par exemple la création d’un réseau en
+          VLSM ou la mise en place de SSH.</p>
+          
+          <br><div class="popup">
+            <img src="assets/images/SAE201.png" alt="Aperçu du projet" class="popup-img">
+            <p>Réseau créé avec Cisco Packet Tracer</p>
+          </div><br>
+          
+          <h2>Déroulé du projet :</h2>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Avant de se lancer, il est essentiel de réfléchir au réseau que l’on va mettre 
+          en place. C’est pourquoi j’ai commencé par rédiger un document brouillon, dans lequel j’ai renseigné 
+          toutes les informations de mon entreprise (nombre d’employés, nombre de salles, de routeurs, de switchs, etc.).<br><br>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;Ensuite, j’ai réalisé un plan de mon entreprise sur papier 
+          afin de voir ce qu’il serait judicieux de modifier ou de supprimer. Cette étape est,
+          selon moi, très importante, car elle permet d’avoir une vue plus générale du réseau,
+          de mieux le visualiser, et de savoir quels problèmes on est susceptible de rencontrer,
+          même si un imprévu peut vite arriver.<br><br>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;Enfin, il faut se lancer dans la réalisation du projet 
+          en créant le réseau sur Cisco Packet Tracer, étape par étape, sans se précipiter.
+          </p>
+          
+          <h2>Les apports de ce projet</h2>
+          <h4>Ce projet m’a permis de valider de nombreuses compétences vues en cours :</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Maîtriser Cisco Packet Tracer<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Concevoir un réseau informatique opérationnel en sécurisant l’environnement<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Mettre en place des services réseaux pour les utilisateurs<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Configurer les fonctions de base du réseau local
+          </p>
+          <h4>Conclusion :</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Ce projet a été pour moi une excellente expérience en réseau. Je me suis beaucoup 
+            amusé à imaginer mon entreprise et à concevoir son réseau. Cependant, il reste beaucoup 
+            de points à améliorer dans mon réseau en raison de mon manque de connaissances et d’expérience, notamment en matière de sécurité.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
-	<!-- Tableau de compétences --!>
+
+  <!-- Tableau de compétences -->
   <section id="competences" class="skills-section">
-  <h2>Mes compétences</h2>
-  <table class="skills-table">
-    <thead>
-      <tr>
-        <th>Réseau</th>
-        <th>Informatique</th>
-        <th>Télécomm</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Configuration IP / DHCP / DNS</td>
-        <td>HTML / CSS / JavaScript</td>
-        <td>Transmission analogique / numérique</td>
-      </tr>
-      <tr>
-        <td>Routage (static / dynamique)</td>
-        <td>Python / Bash / Java</td>
-        <td>Modulation / multiplexage</td>
-      </tr>
-      <tr>
-        <td>Switching / VLAN</td>
-        <td>Linux / Windows Server</td>
-        <td>Infrastructure des Opérateurs</td>
-      </tr>
-      <tr>
-        <td>Wi-Fi / Sécurité réseau</td>
-        <td>Virtualisation (VirtualBox)</td>
-        <td>VoIP / Téléphonie IP</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+    <h2>Mes compétences</h2>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Réseau</th>
+          <th>Informatique</th>
+          <th>Télécommunications</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Configuration IP / DHCP / DNS</td>
+          <td>HTML / CSS / JavaScript</td>
+          <td>Transmission analogique / numérique</td>
+        </tr>
+        <tr>
+          <td>Routage (statique / dynamique)</td>
+          <td>Python / Bash / Java</td>
+          <td>Modulation / multiplexage</td>
+        </tr>
+        <tr>
+          <td>Switching / VLAN</td>
+          <td>Linux / Windows Server</td>
+          <td>Infrastructure des opérateurs</td>
+        </tr>
+        <tr>
+          <td>Wi-Fi / Sécurité réseau</td>
+          <td>Virtualisation (VirtualBox)</td>
+          <td>VoIP / Téléphonie IP</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-	<section id="contact" class="container contact-section">
-		<h1>Contact</h1>
-		<form action="https://formsubmit.co/naimghares@gmail.com" method="POST" class="contact-form">
-		  <!-- Champ caché pour redirection après envoi -->
-		  <input type="hidden" name="_next" value="https://portfolio-naim-ghares.netlify.app/thank-you.html">
-		  <!-- Champ caché pour désactiver le captcha -->
-		  <input type="hidden" name="_captcha" value="false">
+  <section id="contact" class="container contact-section">
+    <h1>Contact</h1>
+    <form action="https://formsubmit.co/naimghares@gmail.com" method="POST" class="contact-form">
+      <!-- Redirection après envoi -->
+      <input type="hidden" name="_next" value="https://portfolio-naim-ghares.netlify.app/thank-you.html">
+      <!-- Désactiver le captcha -->
+      <input type="hidden" name="_captcha" value="false">
 
-		  <label for="email">Votre email :</label>
-		  <center><input type="email" name="email" id="email" required></center>
+      <label for="email">Votre email :</label>
+      <center><input type="email" name="email" id="email" required></center>
 
-		  <label for="message">Votre message :</label>
-		  <center><textarea name="message" id="message" rows="5" required></textarea></center>
+      <label for="message">Votre message :</label>
+      <center><textarea name="message" id="message" rows="5" required></textarea></center>
 
-		  <center><button type="submit">Envoyer</button></center>
-		</form>
+      <center><button type="submit">Envoyer</button></center>
+    </form>
+  </section>
 
+  <footer class="site-footer">
+    <p>&copy; 2025 Naïm Ghares — Tous droits réservés</p>
+  </footer>
 
-	</section>
-	<footer class="site-footer">
-		<p>&copy; 2025 Naïm Ghares — Tous droits réservés</p>
-	</footer>
+  <!-- Script de bascule de thème -->
+  <script>
+    (function() {
+      const body = document.body;
+      const toggleBtn = document.getElementById('theme-toggle');
 
+      // Charger le thème sauvegardé
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        toggleBtn.textContent = ' Mode clair';
+      } else {
+        body.classList.add('light-theme');
+        body.classList.remove('dark-theme');
+        toggleBtn.textContent = ' Mode sombre';
+      }
+
+      // Bascule au clic
+      toggleBtn.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+          body.classList.replace('light-theme', 'dark-theme');
+          toggleBtn.textContent = ' Mode clair';
+          localStorage.setItem('theme', 'dark');
+        } else {
+          body.classList.replace('dark-theme', 'light-theme');
+          toggleBtn.textContent = ' Mode sombre';
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
