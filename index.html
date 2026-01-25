@@ -6,6 +6,7 @@
     <title>Naïm | Portfolio R&T</title>
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,9 +21,9 @@
             <li><a href="#home">Accueil</a></li>
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#projects">Projets</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
-			<li class="theme-switch"><i class="fas fa-sun" id="theme-toggle"></i></li>
-            <li class="btn-nav"><button id="terminal-toggle">_Terminal</button></li>
+            <li class="theme-switch"><i class="fas fa-sun" id="theme-toggle"></i></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -35,38 +36,19 @@
         <div class="hero-content reveal">
             <h1>Salut, je suis <span class="highlight">Naïm</span></h1>
             <h2><span class="txt-type" data-wait="3000" data-words='["Étudiant R&T", "Passionné Réseaux"]'></span></h2>
+            
             <p>
-				Je suis <strong>Naïm Ghares</strong>, étudiant en 2ème année de BUT R&T.
-				Ce qui me motive ? La résolution de problèmes complexes. J'aborde chaque contrainte technique comme un défi logique, en appliquant une méthodologie de dépannage (approche ascendante).
-				<br><br>
-				Attiré par la Cybersécurité, je me forme durant mon temps libre sur les techniques offensives via <strong>TryHackMe</strong> pour mieux comprendre comment défendre une infrastructure.
-				<br><br>
-				Côté personnel, la <strong>spéléologie</strong> et l'<strong>escalade</strong> m'ont appris deux valeurs essentielles : la confiance en son binôme et la capacité à garder son sang-froid en environnement contraint.
-			</p>
+                Je suis <strong>Naïm Ghares</strong>, étudiant en 2ème année de BUT R&T.
+                Ce qui me motive ? La résolution de problèmes complexes. J'aborde chaque contrainte technique comme un défi logique, en appliquant une méthodologie de dépannage rigoureuse (approche ascendante).
+                <br><br>
+                Attiré par la Cybersécurité, je me forme activement sur les techniques offensives via <strong>TryHackMe</strong> pour mieux comprendre comment défendre une infrastructure.
+                <br><br>
+                Côté personnel, la <strong>spéléologie</strong> et l'<strong>escalade</strong> m'ont appris deux valeurs essentielles : la confiance en son binôme et la capacité à garder son sang-froid en environnement contraint.
+            </p>
             
             <div class="hero-btns">
                 <a href="#projects" class="btn">Voir mes projets</a>
                 <a href="./assets/cv.pdf" target="_blank" class="btn btn-outline">Mon CV</a>
-            </div>
-
-            <div class="terminal-window hidden" id="interactive-terminal">
-                <div class="terminal-header">
-                    <div class="buttons">
-                        <span class="dot red" id="close-terminal"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <div class="title">bash -- naïm@portfolio (Tapez 'help')</div>
-                </div>
-                <div class="terminal-body" id="terminal-container">
-                    <div id="terminal-output">
-                        <p>Bienvenue dans le terminal de Naïm. Tapez 'help' pour voir les commandes.</p>
-                    </div>
-                    <div class="input-line">
-                        <span class="prompt">naïm@rt:~$</span>
-                        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -80,18 +62,19 @@
         <div class="skills-container">
             <div class="skill-card reveal">
                 <h3>Réseaux & Système</h3>
-                <p>Cisco, Linux, Windows Server, Protocoles.</p>
+                <p>Cisco, Linux, Windows Server, Protocoles (OSPF, BGP).</p>
             </div>
             <div class="skill-card reveal">
                 <h3>Développement</h3>
-                <p>Python, Bash, HTML/CSS, JavaScript, Java.</p>
+                <p>Python, Bash, HTML/CSS, JavaScript.</p>
             </div>
             <div class="skill-card reveal">
                 <h3>Outils & Méthodologie</h3>
-                <p>Wireshark, Packet Tracer, GNS3.</p>
+                <p>Wireshark, Packet Tracer, GNS3, Proxmox.</p>
                 <div class="tech-stack">
                     <span>Dépannage Ascendant</span>
-                    <span>TryHackMe</span> <span>Automatisation</span>
+                    <span>TryHackMe</span>
+                    <span>Automatisation</span>
                 </div>
             </div>
         </div>
@@ -146,6 +129,77 @@
         </div>
     </section>
 
+    <section id="certifications" class="section">
+        <h2 class="section-title reveal">Certifications & Badges</h2>
+        <div class="projects-grid">
+
+            <div class="project-card reveal">
+                <div class="card-header">
+                    <span>ANSSI</span>
+                </div>
+                <h3>MOOC SecNumacadémie</h3>
+                <p>Attestation validée le 25/01/2026 par l'ANSSI.</p>
+                
+                <ul class="cert-list">
+                    <li>Authentification : <strong>94%</strong></li>
+                    <li>Sécurité Internet : <strong>94%</strong></li>
+                    <li>Poste de travail : <strong>92%</strong></li>
+                    <li>Panorama SSI : <strong>90%</strong></li>
+                </ul>
+
+                <div class="tech-stack">
+                    <span>Cybersécurité</span>
+                    <span>Hygiène Info</span>
+                </div>
+                <div class="cert-link">
+                     <a href="./assets/attestation-secnum.pdf" target="_blank" class="btn btn-outline small-btn">Voir l'attestation</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="card-header">
+                    <span>Red Team</span>
+                </div>
+                <h3>Profil TryHackMe</h3>
+                <p>Entraînement actif aux tests d'intrusion et CTF.</p>
+                
+                <div class="thm-badge-container">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5663617" class="thm-iframe"></iframe>
+                </div>
+
+                <div class="tech-stack">
+                    <span>Pentest</span>
+                    <span>CTF</span>
+                    <span>Linux</span>
+                </div>
+                <div class="cert-link">
+                    <a href="https://tryhackme.com/p/naimghares" target="_blank" class="link-icon">Voir mon profil &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="card-header">
+                    <span>Numérique</span>
+                </div>
+                <h3>Certification Pix</h3>
+                <p>Développement des compétences numériques.</p>
+                
+                <div class="pix-container">
+                     <div class="pix-circle">
+                         <span class="pix-score">565</span>
+                         <span class="pix-label">Pix</span>
+                     </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span>Données</span>
+                    <span>Sécurité</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section id="contact" class="section contact-section reveal">
         <h2 class="section-title">Me Contacter</h2>
         <p>Un projet ou une proposition de stage ? Envoyez-moi un message.</p>
@@ -165,7 +219,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Naïm</p>
+        <p>&copy; 2025 Naïm Ghares - BUT R&T</p>
     </footer>
 
     <div class="modal-overlay" id="modal-project1">
@@ -177,27 +231,15 @@
             </div>
             <div class="modal-body">
                 <h3>Contexte & Enjeux</h3>
-                <p>Déploiement complet d'une infrastructure réseau simulant une PME interconnectée à un Fournisseur d'Accès Internet (FAI). L'objectif était de maîtriser la chaîne de liaison complète, du poste utilisateur jusqu'au cœur de réseau (Backbone).</p>
-
-                <h3>Solution Technique Déployée</h3>
+                <p>Déploiement complet d'une infrastructure réseau simulant une PME interconnectée à un Fournisseur d'Accès Internet (FAI).</p>
+                <h3>Solution Technique</h3>
                 <ul>
-                    <li><strong>Architecture Sécurisée :</strong> Mise en place d'une <strong>DMZ</strong> (Zone Démilitarisée) pour isoler les serveurs publics (Web, DNS) du réseau interne (LAN).</li>
-                    <li><strong>Routage Avancé :</strong> Implémentation du protocole <strong>OSPFv3</strong> pour assurer un routage dynamique et résilient sur une double pile IPv4/IPv6.</li>
-                    <li><strong>Services Réseaux :</strong> Configuration de serveurs DNS (Split-Horizon) et de services de messagerie interne.</li>
-                    <li><strong>Segmentation :</strong> Découpage du réseau en VLANs par service pour limiter les domaines de diffusion.</li>
+                    <li><strong>Architecture :</strong> Mise en place d'une DMZ et segmentation VLAN.</li>
+                    <li><strong>Routage :</strong> OSPFv3 double pile IPv4/IPv6.</li>
+                    <li><strong>Services :</strong> DNS Split-Horizon et messagerie.</li>
                 </ul>
-
-                <h3>Compétences Clés</h3>
-                <div class="tech-stack">
-                    <span>Cisco</span>
-                    <span>IPv6 / OSPFv3</span>
-                    <span>ACL & NAT</span>
-                    <span>DNS</span>
-					<span>VLANs / SSH</span>
-                </div>
-
                 <div style="margin-top: 20px;">
-                    <a href="./assets/sae201.pdf" target="_blank" class="btn btn-outline">Consulter le rapport technique</a>
+                    <a href="./assets/sae201.pdf" target="_blank" class="btn btn-outline">Rapport technique</a>
                 </div>
             </div>
         </div>
@@ -207,29 +249,19 @@
         <div class="modal-content">
             <button class="close-modal">&times;</button>
             <div class="modal-header">
-                <h2>Se sensibiliser à l'hygiène informatique</h2>
+                <h2>Hygiène informatique</h2>
                 <p class="subtitle">Analyse des vecteurs d'attaque et prévention</p>
             </div>
             <div class="modal-body">
                 <h3>Contexte</h3>
-                <p>Partant du constat que 90% des incidents de sécurité proviennent d'une erreur humaine, ce projet visait à analyser les menaces actuelles pour construire une stratégie de défense préventive.</p>
-
-                <h3>Analyse & Méthodologie</h3>
+                <p>Analyse des menaces actuelles pour construire une stratégie de défense préventive.</p>
+                <h3>Analyse</h3>
                 <ul>
-                    <li><strong>Social Engineering :</strong> Étude des mécanismes psychologiques utilisés dans le Phishing et le Vishing.</li>
-                    <li><strong>Analyse de Malwares :</strong> Compréhension du fonctionnement technique des Ransomwares.</li>
-                    <li><strong>Bonnes Pratiques (ANSSI) :</strong> Élaboration de recommandations sur l'authentification forte (MFA), la gestion des mots de passe (Keepass) et la sécurisation des postes nomades.</li>
+                    <li><strong>Social Engineering :</strong> Phishing et Vishing.</li>
+                    <li><strong>Malwares :</strong> Étude des Ransomwares.</li>
                 </ul>
-
-                <h3>Compétences Clés</h3>
-                <div class="tech-stack">
-                    <span>Analyse de risques</span>
-                    <span>RGPD / ANSSI</span>
-                    <span>Sécurité Physique</span>
-                </div>
-
-                 <div style="margin-top: 20px;">
-                    <a href="./assets/sae101.pdf" target="_blank" class="btn btn-outline">Voir le support de prévention</a>
+                <div style="margin-top: 20px;">
+                    <a href="./assets/sae101.pdf" target="_blank" class="btn btn-outline">Support de prévention</a>
                 </div>
             </div>
         </div>
@@ -239,26 +271,17 @@
         <div class="modal-content">
             <button class="close-modal">&times;</button>
              <div class="modal-header">
-                <h2>Analyse de Signal & Supports</h2>
+                <h2>Analyse de Signal</h2>
                 <p class="subtitle">Étude de la couche physique (OSI 1)</p>
             </div>
             <div class="modal-body">
                <h3>Contexte</h3>
-               <p>Validation théorique et pratique des contraintes liées à la transmission de données sur supports cuivre (RJ45).</p>
-
+               <p>Validation théorique et pratique des contraintes liées à la transmission sur supports cuivre.</p>
                <h3>Expérimentations</h3>
                <ul>
-                   <li><strong>Réflectométrie :</strong> Analyse des phénomènes de réflexion du signal (échos) dus à une mauvaise adaptation d'impédance.</li>
-                   <li><strong>Mesures à l'Oscilloscope :</strong> Calcul de l'atténuation linéique (dB) et de la vitesse de propagation sur différentes longueurs de câbles.</li>
-                   <li><strong>Diagnostic :</strong> Identification de défauts physiques (court-circuit, circuit ouvert) via l'analyse de la forme d'onde.</li>
+                   <li><strong>Réflectométrie :</strong> Analyse des échos.</li>
+                   <li><strong>Mesures :</strong> Atténuation et vitesse de propagation.</li>
                </ul>
-
-               <h3>Compétences Clés</h3>
-               <div class="tech-stack">
-                    <span>Oscilloscope</span>
-                    <span>Physique du signal</span>
-                    <span>Câblage Structuré</span>
-                </div>
             </div>
         </div>
     </div>
