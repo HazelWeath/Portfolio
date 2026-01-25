@@ -7,7 +7,7 @@
 Bienvenue sur le dépôt GitHub de mon portfolio personnel.
 Ce projet a été conçu "From Scratch" (sans framework lourd) pour présenter mon parcours d'étudiant en **BUT Réseaux & Télécommunications**, mes projets techniques (SAÉ) et mes compétences en administration système et cybersécurité.
 
- **Voir le site en ligne :** [Insérer le lien de ta page GitHub Pages ici]
+ **Voir le site en ligne :** https://portfolio-naim-ghares.netlify.app
 
 ---
 
