@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ======================================================
-    // 1. NAVBAR & SCROLL (Menu qui change au défilement)
+    // 1. NAVBAR & SCROLL
     // ======================================================
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ======================================================
-    // 2. SCROLL REVEAL (Apparition des éléments)
+    // 2. SCROLL REVEAL (Apparition)
     // ======================================================
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ======================================================
-    // 4. TYPEWRITER (Effet Machine à écrire)
+    // 4. TYPEWRITER (Machine à écrire)
     // ======================================================
     class TypeWriter {
         constructor(txtElement, words, wait = 3000) {
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ======================================================
-    // 5. GESTION DES MODALES (Pop-ups Projets)
+    // 5. GESTION DES MODALES
     // ======================================================
     const openModalButtons = document.querySelectorAll('.btn-modal-trigger');
     const closeModalButtons = document.querySelectorAll('.close-modal');
@@ -138,12 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ======================================================
-    // 6. THÈME CLAIR / SOMBRE (Logique inversée)
+    // 6. THÈME CLAIR / SOMBRE
     // ======================================================
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Vérifie si le mode sombre était actif précédemment
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
         if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
@@ -154,11 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.toggle('dark-mode');
 
             if (body.classList.contains('dark-mode')) {
-                // Passage en mode sombre
                 themeToggle.classList.replace('fa-moon', 'fa-sun');
                 localStorage.setItem('theme', 'dark');
             } else {
-                // Retour au mode clair
                 themeToggle.classList.replace('fa-sun', 'fa-moon');
                 localStorage.setItem('theme', 'light');
             }
@@ -174,9 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         const key = e.key.toLowerCase();
         
-        // Petite sécurité pour éviter les erreurs si la touche n'est pas reconnue
-        if (!key) return;
-
         if (key === konamiCode[konamiIndex]) {
             konamiIndex++;
             if (konamiIndex === konamiCode.length) {
@@ -189,9 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function activateMatrixMode() {
-        alert("🔓 SYSTEM OVERRIDE: ACCESS GRANTED");
-        
-        // Force les variables CSS en mode Hacker vert/noir
+        alert("SYSTEM OVERRIDE: ACCESS GRANTED");
         document.documentElement.style.setProperty('--primary-color', '#00ff41');
         document.documentElement.style.setProperty('--bg-body', '#0d0208');
         document.documentElement.style.setProperty('--bg-card', '#001a05');
@@ -200,12 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--border-color', '#003B00');
         
         document.body.style.fontFamily = "'Courier New', monospace";
-        
-        // Change le titre pour le fun
         const title = document.querySelector('h1');
         if(title) title.innerText = "WAKE UP NEO...";
         
-        // Ajoute la classe dark-mode pour désactiver le fond clair
         document.body.classList.add('dark-mode');
     }
 });

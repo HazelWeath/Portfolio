@@ -10,8 +10,8 @@
     <meta property="og:description" content="Découvrez mon portfolio : Projets réseaux, certifications et compétences en administration système et sécurité.">
     <meta property="og:image" content="https://portfolio-naim-ghares.netlify.app/assets/img/preview.png">
     <meta property="og:url" content="https://portfolio-naim-ghares.netlify.app/">
-	<meta name="author" content="GHARES Naïm">
-	
+    <meta name="author" content="GHARES Naïm">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     
@@ -79,7 +79,7 @@
                 <div class="timeline-content">
                     <h3>Alternance R&T</h3>
                     <span class="company">Orange</span>
-                    <p>Alternance en tant que chargé d'affaires. Le but était d'étudier l'architechture du réseau existant afin de le modifier (pour la réalisation de projet ou l'esthétique des rues).</p>
+                    <p>Alternance en tant que chargé d'affaires. Le but était d'étudier l'architecture du réseau existant afin de le modifier (pour la réalisation de projet ou l'esthétique des rues).</p>
                 </div>
             </div>
 
@@ -210,14 +210,41 @@
 
     <section id="contact" class="section contact-section reveal">
         <h2 class="section-title">Me Contacter</h2>
-        <p>Un projet ou une proposition de stage ? Envoyez-moi un message.</p>
+        <p style="margin-bottom: 30px;">Un projet ou une proposition de stage ? Envoyez-moi un message.</p>
         
-        <form action="https://formspree.io/f/xyzlggvo" method="POST" class="contact-form">
-            <div class="form-group"><input type="text" name="name" placeholder="Votre Nom" required></div>
-            <div class="form-group"><input type="email" name="_replyto" placeholder="Votre Email" required></div>
-            <div class="form-group"><textarea name="message" rows="5" placeholder="Votre Message" required></textarea></div>
-            <button type="submit" class="btn">Envoyer le message</button>
-        </form>
+        <div class="contact-box">
+            <form action="https://formspree.io/f/xyzlggvo" method="POST" class="contact-form">
+                <input type="text" name="_gotcha" style="display:none">
+
+                <div class="form-group">
+                    <label for="name">Qui êtes-vous ?</label>
+                    <input type="text" id="name" name="name" placeholder="Votre Nom / Entreprise" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Votre Email</label>
+                    <input type="email" id="email" name="_replyto" placeholder="exemple@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Objet de la demande</label>
+                    <select id="subject" name="_subject" required>
+                        <option value="" disabled selected>Sélectionnez un sujet...</option>
+                        <option value="Proposition de Stage / Alternance">Proposition de Stage / Alternance</option>
+                        <option value="Proposition de Mission">Proposition de Travail</option>
+                        <option value="Question sur un projet">Question technique / Projet</option>
+                        <option value="Autre demande">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Dites-m'en plus..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-full">Envoyer le message</button>
+            </form>
+        </div>
 
         <div class="socials-footer">
             <a href="https://github.com/HazelWeath" target="_blank"><i class="fab fa-github"></i></a>
@@ -251,6 +278,46 @@
             </div>
         </div>
     </div>
+    <div class="modal-overlay" id="modal-project2">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Hygiène informatique</h2>
+                <p class="subtitle">Analyse des vecteurs d'attaque et prévention</p>
+            </div>
+            <div class="modal-body">
+                <h3>Contexte</h3>
+                <p>Analyse des menaces actuelles pour construire une stratégie de défense préventive.</p>
+                <h3>Analyse</h3>
+                <ul>
+                    <li><strong>Social Engineering :</strong> Phishing et Vishing.</li>
+                    <li><strong>Malwares :</strong> Étude des Ransomwares.</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <a href="./assets/sae101.pdf" target="_blank" class="btn btn-outline">Support de prévention</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-project3">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+             <div class="modal-header">
+                <h2>Analyse de Signal</h2>
+                <p class="subtitle">Étude de la couche physique (OSI 1)</p>
+            </div>
+            <div class="modal-body">
+               <h3>Contexte</h3>
+               <p>Validation théorique et pratique des contraintes liées à la transmission sur supports cuivre.</p>
+               <h3>Expérimentations</h3>
+               <ul>
+                   <li><strong>Réflectométrie :</strong> Analyse des échos.</li>
+                   <li><strong>Mesures :</strong> Atténuation et vitesse de propagation.</li>
+               </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

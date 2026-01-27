@@ -3,15 +3,15 @@
    ========================================= */
 :root {
     /* --- MODE CLAIR (Variables par défaut) --- */
-    --primary-color: #ea580c; /* Orange foncé pour le contraste sur blanc */
-    --bg-body: #f3f4f6;       /* Gris très clair */
-    --bg-card: #ffffff;       /* Blanc pur */
+    --primary-color: #ea580c; 
+    --bg-body: #f3f4f6;       
+    --bg-card: #ffffff;       
     --bg-nav-scrolled: rgba(255, 255, 255, 0.95);
     
-    --text-main: #111827;     /* Noir quasi pur */
-    --text-muted: #4b5563;    /* Gris foncé */
+    --text-main: #111827;     
+    --text-muted: #4b5563;    
     
-    --border-color: #e5e7eb;  /* Gris léger */
+    --border-color: #e5e7eb;  
     --shadow-color: rgba(0, 0, 0, 0.1);
     
     --font-main: 'Poppins', sans-serif;
@@ -20,15 +20,15 @@
 
 /* --- MODE SOMBRE (Activé via la classe .dark-mode) --- */
 body.dark-mode {
-    --primary-color: #f97316; /* Orange Vif */
-    --bg-body: #0a0a0a;       /* Noir profond */
-    --bg-card: #171717;       /* Gris très sombre */
+    --primary-color: #f97316; 
+    --bg-body: #0a0a0a;       
+    --bg-card: #171717;       
     --bg-nav-scrolled: rgba(5, 5, 5, 0.95);
     
-    --text-main: #e5e5e5;     /* Blanc cassé */
-    --text-muted: #d1d5db;    /* Gris clair */
+    --text-main: #e5e5e5;     
+    --text-muted: #d1d5db;    
     
-    --border-color: #262626;  /* Gris sombre */
+    --border-color: #262626;  
     --shadow-color: rgba(249, 115, 22, 0.2);
 }
 
@@ -56,7 +56,7 @@ button { cursor: pointer; font-family: inherit; }
    ========================================= */
 .animated-bg {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-    /* Fond pour le mode clair (points discrets) */
+    /* Fond pour le mode clair */
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
@@ -64,7 +64,7 @@ button { cursor: pointer; font-family: inherit; }
     animation: moveGrid 15s linear infinite;
 }
 
-/* Fond pour le mode sombre (points oranges) */
+/* Fond pour le mode sombre */
 body.dark-mode .animated-bg {
     background-image: 
         linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
@@ -121,7 +121,6 @@ body.dark-mode .animated-bg {
 .hero-content p { color: var(--text-muted); }
 .hero-btns { margin: 30px 0; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
 
-/* Icônes sociaux Hero */
 .social-hero { display: flex; gap: 15px; margin-left: 10px; }
 .social-hero a { font-size: 1.5rem; color: var(--text-muted); transition: 0.3s; }
 .social-hero a:hover { color: var(--primary-color); transform: translateY(-3px); }
@@ -135,32 +134,55 @@ body.dark-mode .animated-bg {
 .hero-img img:hover { transform: scale(1.02); }
 
 /* =========================================
-   6. TIMELINE (PARCOURS)
+   6. TIMELINE (STYLE BULLE)
    ========================================= */
 .timeline-container {
     position: relative; max-width: 800px; margin: 0 auto;
-    padding-left: 30px; border-left: 2px solid var(--border-color);
+    padding-left: 40px; border-left: 3px solid var(--border-color);
 }
 .timeline-item { position: relative; margin-bottom: 40px; }
 .timeline-item:last-child { margin-bottom: 0; }
 .timeline-dot {
-    position: absolute; left: -36px; top: 0;
-    width: 14px; height: 14px; border-radius: 50%;
+    position: absolute; left: -48px; top: 20px;
+    width: 16px; height: 16px; border-radius: 50%;
     background: var(--primary-color);
-    box-shadow: 0 0 0 4px var(--bg-body);
+    box-shadow: 0 0 0 5px var(--bg-body);
 }
 .timeline-date {
     font-family: var(--font-code); color: var(--primary-color);
-    font-size: 0.9rem; margin-bottom: 5px; font-weight: bold;
+    font-size: 0.85rem; margin-bottom: 8px; font-weight: bold;
+    display: inline-block;
+}
+
+/* Bulle de contenu */
+.timeline-content {
+    background: var(--bg-card); padding: 25px; border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    position: relative; transition: transform 0.3s ease;
+}
+/* Flèche de la bulle */
+.timeline-content::before {
+    content: ''; position: absolute; left: -10px; top: 20px; width: 0; height: 0;
+    border-style: solid; border-width: 10px 10px 10px 0;
+    border-color: transparent var(--border-color) transparent transparent;
+}
+.timeline-content::after {
+    content: ''; position: absolute; left: -9px; top: 20px; width: 0; height: 0;
+    border-style: solid; border-width: 10px 10px 10px 0;
+    border-color: transparent var(--bg-card) transparent transparent;
+}
+.timeline-content:hover {
+    transform: translateX(5px); border-color: var(--primary-color);
 }
 .timeline-content h3 { color: var(--text-main); margin-bottom: 2px; }
 .timeline-content .company {
-    display: block; font-style: italic; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;
+    display: block; font-style: italic; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;
 }
 .timeline-content p { color: var(--text-muted); font-size: 0.95rem; }
 
 /* =========================================
-   7. SECTIONS & CARDS (CORRIGÉS)
+   7. SECTIONS & CARDS
    ========================================= */
 .section { padding: 80px 10%; }
 .section-title { text-align: center; font-size: 2rem; margin-bottom: 50px; color: var(--text-main); }
@@ -174,7 +196,7 @@ body.dark-mode .animated-bg {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 30px; 
-    align-items: start; /* Évite d'étirer les cartes (corrige le vide en bas) */
+    align-items: start;
 }
 
 .skill-card, .project-card {
@@ -245,22 +267,52 @@ body.dark-mode .animated-bg {
 .cert-link { margin-top: 5px; padding-top: 5px; }
 
 /* =========================================
-   9. FOOTER & SOCIALS
+   9. FORMULAIRE & FOOTER (STYLE BULLE)
    ========================================= */
-.contact-form { max-width: 600px; margin: 0 auto 40px; }
-.form-group { margin-bottom: 20px; }
-.contact-form input, .contact-form textarea {
-    width: 100%; padding: 15px; background: var(--bg-card); border: 1px solid var(--border-color);
-    border-radius: 5px; color: var(--text-main); font-family: var(--font-main); transition: 0.3s;
-}
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-color); }
 .contact-section { text-align: center; }
 
-.socials-footer { margin-top: 30px; font-size: 1.5rem; }
+.contact-box {
+    max-width: 700px; margin: 0 auto 40px; padding: 40px;
+    background: var(--bg-card); border-radius: 12px;
+    border: 1px solid var(--border-color); box-shadow: 0 10px 30px var(--shadow-color);
+}
+.contact-form { text-align: left; }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block; margin-bottom: 8px; font-size: 0.9rem;
+    color: var(--primary-color); font-weight: 600; font-family: var(--font-code);
+}
+/* Inputs */
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%; padding: 15px; background: var(--bg-body);
+    border: 1px solid var(--border-color); border-radius: 8px;
+    color: var(--text-main); font-family: var(--font-main); font-size: 1rem;
+    transition: 0.3s; appearance: none;
+}
+/* Flèche Select */
+.contact-form select {
+    cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+                      linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { 
+    outline: none; border-color: var(--primary-color); 
+    box-shadow: 0 0 10px var(--shadow-color); background: var(--bg-card);
+}
+.btn-full { width: 100%; margin-top: 10px; }
+
+.socials-footer { margin-top: 50px; font-size: 1.5rem; text-align: center; }
 .socials-footer a { margin: 0 15px; color: var(--text-muted); transition: 0.3s; }
 .socials-footer a:hover { color: var(--primary-color); }
 
 footer { text-align: center; padding: 20px; background: var(--bg-card); color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); }
+
+/* Responsive bulle contact */
+@media screen and (max-width: 768px) {
+    .contact-box { padding: 20px; }
+}
 
 /* =========================================
    10. MODALES & RESPONSIVE
