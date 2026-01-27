@@ -27,8 +27,9 @@
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#timeline">Parcours</a></li>
-            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projets</a></li>
+            <li><a href="#side-projects">Perso</a></li>
             <li><a href="#certifications">Certifs</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="theme-switch"><i class="fas fa-moon" id="theme-toggle"></i></li>
@@ -166,6 +167,35 @@
         </div>
     </section>
 
+    <section id="side-projects" class="section">
+        <h2 class="section-title reveal">Projets Personnels & Passions</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card reveal">
+                <div class="card-header" style="color: var(--text-main);">Cryptographie</div>
+                <h3>Algorithme de chiffrement</h3>
+                <p>Algorithme de chiffrement symétrique (XOR + Rolling Key), réalisé suite au premier cours sur les différents type de chiffrements.</p>
+                
+                <div class="tech-stack">
+                    <span>Python 3.8+</span>
+                    <span>Vanilla JS</span>
+                    <span>Full-Stack</span>
+                </div>
+                
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <a href="https://github.com/HazelWeath/Projet_Chiffrement.git" target="_blank" class="btn btn-outline small-btn"><i class="fab fa-github"></i> Code</a>
+                    <button class="link-icon" style="margin:0;" data-modal-trigger data-modal-target="#modal-crypto">Détails &rarr;</button>
+                </div>
+            </div>
+
+            <div >
+                
+            </div>
+
+
+        </div>
+    </section>
+
     <section id="certifications" class="section">
         <h2 class="section-title reveal">Certifications & Badges</h2>
         <div class="projects-grid">
@@ -231,9 +261,9 @@
                     <select id="subject" name="_subject" required>
                         <option value="" disabled selected>Sélectionnez un sujet...</option>
                         <option value="Proposition de Stage / Alternance">Proposition de Stage / Alternance</option>
-                        <option value="Proposition de Mission">Proposition de Travail</option>
+                        <option value="Proposition de Mission">Proposition de Mission</option>
                         <option value="Question sur un projet">Question technique / Projet</option>
-                        <option value="Autre demande">Autre</option>
+                        <option value="Autre demande">Autre / Prise de contact</option>
                     </select>
                 </div>
 
@@ -317,6 +347,38 @@
             </div>
         </div>
     </div>
+
+    <div class="modal-overlay" id="modal-crypto">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Projet : NaïmCipher</h2>
+                <p class="subtitle">Exploration pratique de la cryptographie symétrique</p>
+            </div>
+            <div class="modal-body">
+                <h3>Fonctionnement Technique</h3>
+                <p>L'algorithme repose sur trois couches de traitement pour garantir la confidentialité et la réversibilité :</p>
+                <ul>
+                    <li><strong>Cœur XOR (Exclusive OR) :</strong> Comparaison binaire bit à bit. C'est l'opération magique qui rend le chiffrement réversible (Message ^ Clé = Chiffré et inversement).</li>
+                    <li><strong>Clé Tournante (Rolling Key) :</strong> Utilisation du Modulo pour répéter la clé si le message est plus long qu'elle.</li>
+                    <li><strong>Encodage Base64 :</strong> Conversion du résultat binaire en caractères imprimables pour le web.</li>
+                </ul>
+
+                <h3>Full-Stack & Compatibilité</h3>
+                <p>Le projet démontre une interopérabilité totale :</p>
+                <ul>
+                    <li><strong>Backend :</strong> Script Python (3.8+).</li>
+                    <li><strong>Frontend :</strong> Interface web en Vanilla JS (Zéro dépendance) hébergée sur Netlify.</li>
+                </ul>
+
+                <div style="margin-top: 20px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <a href="https://github.com/HazelWeath/Projet_Chiffrement.git" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Voir le Code</a>
+                    <a href="https://naim-projet-chiffrement.netlify.app" target="_blank" class="btn"><i class="fas fa-play"></i> Tester la Démo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="js/main.js"></script>
 </body>

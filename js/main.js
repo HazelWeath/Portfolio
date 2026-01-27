@@ -116,6 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Gestion du bouton "Détails" (data-modal-trigger)
+    const triggerButtons = document.querySelectorAll('[data-modal-trigger]');
+    triggerButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-modal-target');
+            const targetModal = document.querySelector(targetId);
+            if (targetModal) {
+                targetModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
     function closeModal(modal) {
         if (!modal) return;
         modal.classList.remove('active');
