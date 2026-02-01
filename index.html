@@ -139,7 +139,7 @@
                 <h3>Créer un réseau de petite entreprise</h3>
                 <p>Conception complète d'une infrastructure PME (LAN, DMZ) interconnectée à un FAI simulé via Backbone IPv4 et IPv6.</p>
                 <div class="tech-stack">
-                    <span>Cisco</span><span>OSPFv3</span><span>Sécurité</span>
+                    <span>Administrer</span><span>Sécuriser</span><span>Cisco</span>
                 </div>
                 <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project1">Voir le détail &rarr;</button>
             </div>
@@ -149,19 +149,19 @@
                 <h3>Hygiène informatique</h3>
                 <p>Stratégie de sensibilisation aux risques numériques : Social Engineering, gestion des mots de passe et chiffrement.</p>
                 <div class="tech-stack">
-                    <span>ANSSI</span><span>Analyse de risques</span><span>RGPD</span>
+                    <span>Sécuriser</span><span>Analyse de risques</span><span>ANSSI</span>
                 </div>
                 <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project2">Voir le détail &rarr;</button>
             </div>
 
             <div class="project-card reveal">
-                <div class="card-header">SAE 1.03</div>
-                <h3>Analyse de Signal</h3>
-                <p>Étude approfondie de la couche physique (OSI 1) : mesures à l'oscilloscope, réflectométrie et atténuation.</p>
+                <div class="card-header">SAE 3.02</div>
+                <h3>Messagerie Instantanée Java</h3>
+                <p>Développement d'une application de chat complète (Client/Serveur) utilisant les Sockets TCP et une interface graphique Swing.</p>
                 <div class="tech-stack">
-                    <span>Physique</span><span>Câblage</span><span>Mesures</span>
+                    <span>Java Sockets</span><span>Swing</span><span>MariaDB</span>
                 </div>
-                 <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project3">Voir le détail &rarr;</button>
+                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project3">Voir le détail &rarr;</button>
             </div>
 
         </div>
@@ -191,7 +191,6 @@
             <div >
                 
             </div>
-
 
         </div>
     </section>
@@ -290,60 +289,100 @@
         <div class="modal-content">
             <button class="close-modal">&times;</button>
             <div class="modal-header">
-                <h2>Créer un réseau de petite entreprise</h2>
-                <p class="subtitle">Conception d'une infrastructure PME interconnectée</p>
+                <h2>Infrastructure Réseau PME</h2>
+                <p class="subtitle">SAE 2.01 • Conception, Déploiement & Sécurisation</p>
             </div>
             <div class="modal-body">
-                <h3>Contexte & Enjeux</h3>
-                <p>Déploiement complet d'une infrastructure réseau simulant une PME interconnectée à un Fournisseur d'Accès Internet (FAI).</p>
-                <h3>Solution Technique</h3>
+                <h3>Le Besoin (Situation)</h3>
+                <p>Une PME souhaitait refondre son infrastructure réseau pour intégrer une zone publique (DMZ) et sécuriser ses données internes, tout en assurant une connectivité IPv4/IPv6 via un FAI simulé.</p>
+                
+                <h3>Réalisations Techniques (Actions)</h3>
                 <ul>
-                    <li><strong>Architecture :</strong> Mise en place d'une DMZ et segmentation VLAN.</li>
-                    <li><strong>Routage :</strong> OSPFv3 double pile IPv4/IPv6.</li>
-                    <li><strong>Services :</strong> DNS Split-Horizon et messagerie.</li>
+                    <li><strong>Segmentation (VLANs) :</strong> Isolation des flux (Admin, User, VoIP, Serveurs) pour limiter les domaines de diffusion.</li>
+                    <li><strong>Accès aux équipements :</strong> Mise en place de SSH sur les switchs et routers afin de pouvoir tout gérer depuis le pc Admin. </li>
+                    <li><strong>Sécurité (ACLs) :</strong> Filtrage strict des flux inter-VLANs et protection de la DMZ (Stateful Inspection simulée).</li>
+                    <li><strong>Services Réseaux :</strong> Déploiement de DHCP Relay, DNS Split-Horizon et NAT/PAT.</li>
                 </ul>
+
+                <h3>Compétences du Référentiel</h3>
+                <div class="tech-stack" style="margin-top: 5px;">
+                    <span>Administrer (Niv. 2)</span> <span>Sécuriser (Niv. 2)</span>
+                </div>
+
                 <div style="margin-top: 20px;">
-                    <a href="./assets/sae201.pdf" target="_blank" class="btn btn-outline">Rapport technique</a>
+                    <a href="./assets/sae201.pdf" target="_blank" class="btn btn-outline">Voir le rapport technique</a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="modal-overlay" id="modal-project2">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
             <div class="modal-header">
-                <h2>Hygiène informatique</h2>
-                <p class="subtitle">Analyse des vecteurs d'attaque et prévention</p>
+                <h2>Audit & Hygiène Informatique</h2>
+                <p class="subtitle">SAE 1.01 • Analyse de risques & Sensibilisation</p>
             </div>
             <div class="modal-body">
-                <h3>Contexte</h3>
-                <p>Analyse des menaces actuelles pour construire une stratégie de défense préventive.</p>
-                <h3>Analyse</h3>
+                <h3>Le Besoin (Situation)</h3>
+                <p>Analyser les vecteurs d'attaques modernes ciblant les entreprises et proposer un plan d'action préventif pour limiter le facteur humain.</p>
+                
+                <h3>Réalisations Techniques (Actions)</h3>
                 <ul>
-                    <li><strong>Social Engineering :</strong> Phishing et Vishing.</li>
-                    <li><strong>Malwares :</strong> Étude des Ransomwares.</li>
+                    <li><strong>Analyse de Menaces :</strong> Étude technique des Ransomwares et des vecteurs de Social Engineering (Phishing).</li>
+                    <li><strong>Conformité :</strong> Application des recommandations du guide d'hygiène de l'ANSSI.</li>
+                    <li><strong>Prévention :</strong> Rédaction de procédures pour la gestion des mots de passe (entropie) et le chiffrement des postes nomades.</li>
                 </ul>
+
+                <h3>Compétences du Référentiel</h3>
+                <div class="tech-stack" style="margin-top: 5px;">
+                    <span>Sécuriser (Niv. 1)</span> <span>Surveiller</span>
+                </div>
+                <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-muted);">
+                    <em>Sensibiliser aux vulnérabilités d'un système d'information.</em>
+                </p>
+
                 <div style="margin-top: 20px;">
                     <a href="./assets/sae101.pdf" target="_blank" class="btn btn-outline">Support de prévention</a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="modal-overlay" id="modal-project3">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
              <div class="modal-header">
-                <h2>Analyse de Signal</h2>
-                <p class="subtitle">Étude de la couche physique (OSI 1)</p>
+                <h2>Messagerie Instantanée Sécurisée</h2>
+                <p class="subtitle">SAE 3.02 • Développement d'une architecture Client/Serveur</p>
             </div>
             <div class="modal-body">
-               <h3>Contexte</h3>
-               <p>Validation théorique et pratique des contraintes liées à la transmission sur supports cuivre.</p>
-               <h3>Expérimentations</h3>
+               <h3>Le Besoin (Situation)</h3>
+               <p>Concevoir et développer une application de communication temps réel permettant à plusieurs clients d'échanger des messages via un serveur centralisé, avec gestion de comptes et de groupes.</p>
+               
+               <h3>Réalisations Techniques (Actions)</h3>
                <ul>
-                   <li><strong>Réflectométrie :</strong> Analyse des échos.</li>
-                   <li><strong>Mesures :</strong> Atténuation et vitesse de propagation.</li>
+                   <li><strong>Architecture Réseau :</strong> Implémentation de la communication via <strong>Sockets TCP</strong> en Java (multithreading pour gérer plusieurs clients simultanés).</li>
+                   <li><strong>Interface Graphique (GUI) :</strong> Création d'une interface complète en <strong>Java Swing</strong> (Connexion, Chat, Création de groupes, Liste des membres).</li>
+                   <li><strong>Base de Données :</strong> Persistance des utilisateurs et historique des messages via <strong>MariaDB</strong>.</li>
+                   <li><strong>Sécurité & Fonctionnalités :</strong> 
+                       <br>- Hachage des mots de passe côté client avant envoi.
+                       <br>- Vérification de complexité des mots de passe.
+                       <br>- Gestion de discussions éphémères (auto-suppression).
+                   </li>
                </ul>
+
+               <h3>Compétences du Référentiel</h3>
+               <div class="tech-stack" style="margin-top: 5px;">
+                   <span>Programmer (Niv. 2)</span> <span>Connecter (Niv. 2)</span>
+               </div>
+               <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-muted);">
+                    <em>Maîtriser les sockets, la programmation objet et les bases de données.</em>
+                </p>
+
+                <div style="margin-top: 20px;">
+                    <a href="https://github.com/HazelWeath/SAE_302_Developper_des_applications_communicantes.git" target="_blank" class="btn btn-outline">Voir le code sur GitHub</a>
+                </div>
             </div>
         </div>
     </div>
@@ -378,7 +417,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="js/main.js"></script>
 </body>
