@@ -109,29 +109,29 @@ body.dark-mode .animated-bg {
 .theme-switch:hover { color: var(--primary-color); transform: rotate(15deg); }
 
 /* =========================================
-   5. HERO SECTION & SOCIALS (Optimisé Grands Écrans)
+   5. HERO SECTION & SOCIALS (CORRIGÉ GRANDS ÉCRANS)
    ========================================= */
 .hero {
     min-height: 95vh; 
     display: flex; 
     align-items: center; 
-    justify-content: space-between; /* Écarte le texte et l'image */
-    padding: 120px 5% 50px; /* Marges sur les côtés */
-    gap: 80px; /* Espace minimum entre texte et image */
+    justify-content: space-between; 
+    padding: 120px 5% 50px; 
+    gap: 80px; 
     
-    /* NOUVEAU : Pour éviter l'effet "vide" sur les écrans géants */
+    /* Correctif pour les très grands écrans (IUT) */
     max-width: 1400px; 
-    margin: 0 auto; /* Centre tout le bloc au milieu de l'écran */
+    margin: 0 auto; 
 }
 
 .hero-content { 
     flex: 1; 
-    max-width: 650px; /* Le texte ne s'étale pas trop */
+    max-width: 650px; 
 }
 
 .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 10px; color: var(--text-main); }
 .hero-content h2 { font-size: 1.8rem; color: var(--primary-color); font-family: var(--font-code); height: 35px; margin-bottom: 25px; }
-.hero-content p { color: var(--text-muted); font-size: 1.1rem; max-width: 90%; } /* Texte un peu plus gros */
+.hero-content p { color: var(--text-muted); font-size: 1.1rem; max-width: 90%; }
 
 .hero-btns { margin: 35px 0; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
 
@@ -142,42 +142,22 @@ body.dark-mode .animated-bg {
 .hero-img { 
     flex: 1; 
     display: flex; 
-    justify-content: center; /* Centre l'image dans sa zone */
+    justify-content: center; 
     align-items: center;
 }
 
 .hero-img img {
-    width: 100%; /* Prend toute la place disponible... */
-    max-width: 450px; /* ...jusqu'à 450px (au lieu de 280px avant) */
+    width: 100%; 
+    max-width: 450px; /* Agrandi pour les écrans PC */
     height: auto; 
-    border-radius: 20px; /* Arrondi un peu plus moderne */
+    border-radius: 20px; 
     object-fit: cover;
     border: 4px solid var(--bg-body); 
     outline: 4px solid var(--primary-color);
-    box-shadow: 0 0 50px var(--shadow-color); /* Ombre plus diffuse */
+    box-shadow: 0 0 50px var(--shadow-color); 
     transition: transform 0.3s ease;
 }
-
 .hero-img img:hover { transform: scale(1.03) rotate(2deg); }
-
-/* RESPONSIVE : Si l'écran est plus petit qu'une tablette, on empile tout */
-@media screen and (max-width: 992px) {
-    .hero { 
-        flex-direction: column-reverse; /* Image en haut, texte en bas */
-        text-align: center; 
-        padding-top: 130px; 
-        gap: 40px;
-        justify-content: center;
-    }
-    
-    .hero-content p { max-width: 100%; margin: 0 auto; }
-    .hero-btns { justify-content: center; }
-    .social-hero { margin-left: 0; margin-top: 10px; width: 100%; justify-content: center; }
-    
-    .hero-img img { 
-        max-width: 280px; /* On remet petit pour les mobiles/tablettes */
-    }
-}
 
 /* =========================================
    6. TIMELINE (STYLE BULLE)
@@ -355,11 +335,6 @@ body.dark-mode .animated-bg {
 
 footer { text-align: center; padding: 20px; background: var(--bg-card); color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); }
 
-/* Responsive bulle contact */
-@media screen and (max-width: 768px) {
-    .contact-box { padding: 20px; }
-}
-
 /* =========================================
    10. MODALES & RESPONSIVE
    ========================================= */
@@ -388,9 +363,22 @@ footer { text-align: center; padding: 20px; background: var(--bg-card); color: v
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-@media screen and (max-width: 768px) {
-    .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; gap: 30px;}
-    .hero-img img { max-width: 220px; }
+/* --- RESPONSIVE MOBILE/TABLETTE --- */
+@media screen and (max-width: 992px) {
+    /* Hero empilé pour les écrans moyens et petits */
+    .hero { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+        padding-top: 130px; 
+        gap: 40px;
+        justify-content: center;
+    }
+    .hero-content p { max-width: 100%; margin: 0 auto; }
+    .hero-btns { justify-content: center; }
+    .social-hero { margin-left: 0; margin-top: 10px; width: 100%; justify-content: center; }
+    .hero-img img { max-width: 280px; } /* Retour à une taille raisonnable sur mobile */
+    
+    /* Menu Burger */
     .nav-links {
         position: fixed; right: 0; top: 0; height: 100vh;
         background-color: var(--bg-card);
@@ -404,7 +392,11 @@ footer { text-align: center; padding: 20px; background: var(--bg-card); color: v
     .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
     .toggle .line2 { opacity: 0; }
     .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+    
+    /* Ajustement bulle contact */
+    .contact-box { padding: 20px; }
 }
+
 @keyframes navLinkFade {
     from { opacity: 0; transform: translateX(50px); }
     to { opacity: 1; transform: translateX(0); }
