@@ -4,543 +4,598 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naïm Ghares | Portfolio R&T & Cyber</title>
-    
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Naïm Ghares - Étudiant R&T & Cybersécurité">
+    <meta property="og:title" content="Naïm Ghares — Étudiant R&T & Cybersécurité">
     <meta property="og:description" content="Découvrez mon portfolio : Projets réseaux, certifications et compétences en administration système et sécurité.">
     <meta property="og:image" content="https://portfolio-naim-ghares.netlify.app/assets/img/preview.png">
     <meta property="og:url" content="https://portfolio-naim-ghares.netlify.app/">
     <meta name="author" content="GHARES Naïm">
-    
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="animated-bg"></div>
+    <!-- Barre de progression lecture -->
+    <div class="reading-bar" id="reading-bar"></div>
 
+    <!-- Bouton retour en haut -->
+    <button class="back-top" id="back-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Fond animé — 3 orbes douces -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- NAV -->
     <nav class="navbar">
-        <div class="logo">Naïm<span class="highlight">.rt</span></div>
+        <a href="#home" class="logo">Naïm<span class="dot">.</span></a>
         <ul class="nav-links">
-            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
             <li><a href="#timeline">Parcours</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#side-projects">Perso</a></li>
             <li><a href="#certifications">Certifs</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="theme-switch"><i class="fas fa-moon" id="theme-toggle"></i></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+            <li><button class="theme-btn" id="theme-toggle" aria-label="Changer de thème"><i class="fas fa-moon"></i></button></li>
         </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="burger" aria-label="Menu" role="button">
+            <span></span><span></span><span></span>
         </div>
     </nav>
 
+    <!-- ═══════ HERO ═══════ -->
     <section id="home" class="hero">
-        <div class="hero-content reveal">
-            <h1>Salut, je suis <span class="highlight">Naïm</span></h1>
-            <h2>Étudiant en Réseaux & Télécoms</h2>
-            
-            <p>
-				Je m’appelle <strong>Naïm Ghares</strong>, étudiant en deuxième année de BUT Réseaux et Télécommunications.
-				Ce qui me motive avant tout, c’est la résolution de problèmes complexes. J’aime comprendre le fonctionnement
-				des systèmes et analyser méthodiquement les causes d’un dysfonctionnement. Chaque contrainte technique devient
-				pour moi un défi logique à relever avec rigueur.
-			</p>
-			<br>
-			<p>
-				Au fil de ma formation et de mes projets, j’ai développé une approche structurée du dépannage et de la
-				conception de solutions réseau et informatiques. Actuellement en alternance, je confronte mes connaissances
-				théoriques aux réalités du terrain, renforçant ainsi mon autonomie et mon sens des responsabilités.
-			</p>
-			<br>
-			<p>
-				Attiré par la cybersécurité, je me forme en parallèle sur des plateformes comme <strong>TryHackMe</strong>
-				afin d’approfondir ma compréhension des mécanismes d’attaque et de défense.
-			</p>
-			<br>
-			<p>
-				En dehors du cadre académique, la spéléologie et l’escalade m’ont appris la gestion du stress,
-				le sang-froid et la confiance — des qualités que j’applique naturellement dans mon approche technique.
-			</p>
-            
-            <div class="hero-btns">
-                <a href="#projects" class="btn">Voir mes projets</a>
-                <a href="./assets/cv.pdf" target="_blank" class="btn btn-outline">Mon CV</a>
-                
-                <div class="social-hero">
-                    <a href="https://github.com/HazelWeath" target="_blank" title="Mon GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/naïm-ghares-ab33693a1" target="_blank" title="Mon LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="hero-inner">
+
+            <div class="hero-text reveal">
+                <h1>Naïm<br><span class="accent">Ghares</span></h1>
+                <p class="hero-sub">Étudiant BUT R&T &nbsp;·&nbsp; Alternant Orange &nbsp;·&nbsp; Cybersécurité</p>
+                <p class="hero-desc">
+                    Actuellement en 2ᵉ année de BUT Réseaux & Télécommunications à l'IUT de Blois, 
+                    en alternance chez Orange comme chargé d'affaires.
+                    Je suis passionné par l'architecture réseau et l'administration système.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-solid">Voir mes projets</a>
+                    <a href="./assets/cv.pdf" target="_blank" class="btn btn-ghost">
+                        <i class="fas fa-download"></i> Télécharger le CV
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/HazelWeath" target="_blank" class="social-chip">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/naïm-ghares-ab33693a1" target="_blank" class="social-chip">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://tryhackme.com/p/naimghares" target="_blank" class="social-chip">
+                        <i class="fas fa-shield-alt"></i> TryHackMe
+                    </a>
                 </div>
             </div>
+
+            <div class="hero-visual reveal">
+                <div class="photo-frame">
+                    <img src="./assets/img/naim.png" alt="Photo de profil de Naïm Ghares">
+                </div>
+            </div>
+
         </div>
 
-        <div class="hero-img reveal">
-            <img src="./assets/img/naim.png" alt="Photo de profil de Naïm">
+    </section>
+
+    <!-- ═══════ À PROPOS ═══════ -->
+    <section id="about" class="section about-section">
+        <div class="about-inner">
+            <div class="about-text reveal">
+                <div class="section-label">À propos</div>
+                <h2 class="section-heading">Qui je suis</h2>
+                <p>
+                    Je m'appelle Naïm, j'ai 19 ans et je suis étudiant en BUT Réseaux & Télécommunications à l'IUT de Blois. 
+                    Ce qui me motive, c'est comprendre comment les choses fonctionnent et résoudre des problèmes liés à des contraintes techniques. 
+                    Quand un système tombe en panne, j'ai envie de savoir pourquoi. Quand une architecture réseau a une faille, 
+                    je veux comprendre comment elle s'exploite pour pouvoir la corriger.
+                </p>
+                <p>
+                    Mon alternance chez Orange m'apprend le fonctionnement du monde du travail.
+                    C'est là que j'ai compris que la rigueur et l'adaptabilité sont des qualitées importantes.
+                </p>
+                <p>
+                    En dehors des cours et de l'alternance, j'essaie de prendre du temps pour pratiquer la spéléologie et l'escalade. 
+                    Mes autres passe temps sont le dessins, la musique surtout pendant que je travail en solo et enfin, les jeux vidéos solo ou en mulltijoueur.
+                </p>
+            </div>
+            <div class="about-aside reveal">
+                <div class="about-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span>Localisation</span>
+                        <strong>Blois, Centre-Val de Loire</strong>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-language"></i>
+                    <div>
+                        <span>Langues</span>
+                        <strong>Français (natif) · Anglais</strong>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <span>Formation</span>
+                        <strong>BUT Réseaux & Télécoms</strong>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-briefcase"></i>
+                    <div>
+                        <span>Statut</span>
+                        <strong>Alternant chez Orange</strong>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <span>Passions</span>
+                        <strong>Spéléologie · Escalade · Jeux-Vidéos · Dessin</strong>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="timeline" class="section">
-        <h2 class="section-title reveal">Mon Parcours</h2>
-        <div class="timeline-container">
-            
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2025 - Présent</div>
-                <div class="timeline-content">
-                    <h3>Alternance R&T</h3>
-                    <span class="company">Orange</span>
-                    <p>Alternance en tant que chargé d'affaires. Le but était d'étudier l'architecture du réseau existant afin de le modifier (pour la réalisation de projet ou l'esthétique des rues).</p>
+    <!-- ═══════ TIMELINE ═══════ -->
+    <section id="timeline" class="section section-alt">
+        <div class="section-label reveal">Parcours</div>
+        <h2 class="section-heading reveal">Mon chemin jusqu'ici</h2>
+
+        <div class="timeline">
+            <div class="tl-item reveal">
+                <div class="tl-left"><span class="tl-date">2025 — Présent</span></div>
+                <div class="tl-connector"><div class="tl-dot"><i class="fas fa-network-wired"></i></div></div>
+                <div class="tl-card">
+                    <div class="tl-company"><i class="fas fa-building"></i> Orange <span class="tl-badge">Alternance</span></div>
+                    <h3>Chargé d'Affaires R&T</h3>
+                    <p>Étude et modification d'architectures réseau existantes — pour la réalisation de projets clients ou la restructuration des infrastructures télécoms urbaines.</p>
+                    <div class="tl-tags"><span>Architecture Réseau</span><span>Terrain</span><span>Projets Clients</span></div>
                 </div>
             </div>
-
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024 - Présent</div>
-                <div class="timeline-content">
+            <div class="tl-item reveal">
+                <div class="tl-left"><span class="tl-date">2024 — Présent</span></div>
+                <div class="tl-connector"><div class="tl-dot"><i class="fas fa-graduation-cap"></i></div></div>
+                <div class="tl-card">
+                    <div class="tl-company"><i class="fas fa-university"></i> IUT de Blois — Université de Tours <span class="tl-badge">Formation</span></div>
                     <h3>BUT Réseaux & Télécoms</h3>
-                    <span class="company">IUT de Blois (Université de Tours)</span>
-                    <p>Formation : Architecture réseau, Système (Linux/Windows), Téléphonie, Analyse des signaux (Télécoms) et Cybersécurité (Parcours). Réalisation de projet techniques (les SAÉ).</p>
+                    <p>Architecture réseau, Linux/Windows Server, Téléphonie, Analyse des signaux et Cybersécurité. Projets techniques (SAÉ) en équipe et en autonomie.</p>
+                    <div class="tl-tags"><span>Linux</span><span>Cisco</span><span>Java</span><span>Cybersécurité</span></div>
                 </div>
             </div>
-
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
-                <div class="timeline-content">
+            <div class="tl-item reveal">
+                <div class="tl-left"><span class="tl-date">2024</span></div>
+                <div class="tl-connector"><div class="tl-dot"><i class="fas fa-award"></i></div></div>
+                <div class="tl-card">
+                    <div class="tl-company"><i class="fas fa-school"></i> Lycée François Philibert Dessaignes <span class="tl-badge">Diplôme</span></div>
                     <h3>Baccalauréat Général</h3>
-                    <span class="company">Lycée François Philibert Dessaignes</span>
-                    <p>Obtention du baccalauréat avec mention assez bien. Spécialités Mathématiques, Physique-Chimie et NSI (Numérique et Science de l'Informatique) avec option Mathématiques Expertes.</p>
+                    <p>Mention assez bien. Spécialités : Mathématiques, Physique-Chimie, NSI. Option Mathématiques Expertes.</p>
+                    <div class="tl-tags"><span>Mention AB</span><span>NSI</span><span>Maths Expertes</span></div>
                 </div>
             </div>
-
         </div>
     </section>
 
+    <!-- ═══════ SKILLS ═══════ -->
     <section id="skills" class="section">
-        <h2 class="section-title reveal">Mes Compétences</h2>
-        <div class="skills-container">
-            <div class="skill-card reveal">
+        <div class="section-label reveal">Compétences</div>
+        <h2 class="section-heading reveal">Ce que je sais faire</h2>
+        <div class="skills-grid">
+            <div class="skill-block reveal">
+                <div class="skill-icon net"><i class="fas fa-network-wired"></i></div>
                 <h3>Réseaux & Système</h3>
-                <p>Cisco, Linux, Windows Server, Protocoles (OSPF, BGP).</p>
-            </div>
-            <div class="skill-card reveal">
-                <h3>Développement</h3>
-                <p>Python, Bash, HTML/CSS, JavaScript.</p>
-            </div>
-            <div class="skill-card reveal">
-                <h3>Outils & Méthodologie</h3>
-                <p>Wireshark, Packet Tracer, GNS3, Proxmox.</p>
-                <div class="tech-stack">
-                    <span>Dépannage Ascendant</span>
-                    <span>TryHackMe</span>
-                    <span>Automatisation</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <h2 class="section-title reveal">Mes Projets (SAE)</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card reveal">
-                <div class="card-header">SAE 2.01</div>
-                <h3>Créer un réseau de petite entreprise</h3>
-                <p>Conception complète d'une infrastructure PME (LAN, DMZ) interconnectée à un FAI simulé via Backbone IPv4 et IPv6.</p>
-                <div class="tech-stack">
-                    <span>Administrer</span><span>Sécuriser</span><span>Cisco</span>
-                </div>
-                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project1">Voir le détail →</button>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="card-header">SAE 1.01</div>
-                <h3>Hygiène informatique</h3>
-                <p>Stratégie de sensibilisation aux risques numériques : Social Engineering, gestion des mots de passe et chiffrement.</p>
-                <div class="tech-stack">
-                    <span>Sécuriser</span><span>Analyse de risques</span><span>ANSSI</span>
-                </div>
-                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project2">Voir le détail →</button>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="card-header">SAE 3.02</div>
-                <h3>Messagerie en Java</h3>
-                <p>Développement d'une application de chat complète (Client/Serveur) utilisant les Sockets TCP et une interface graphique Swing.</p>
-                <div class="tech-stack">
-                    <span>Java Sockets</span><span>Swing</span><span>MariaDB</span>
-                </div>
-                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-project3">Voir le détail →</button>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="side-projects" class="section">
-        <h2 class="section-title reveal">Au-delà du Code</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card reveal">
-                <div class="card-header" style="color: var(--text-main);">Tech & Dev</div>
-                <h3>Projet cryptographie</h3>
-                <p>Création d'un outil de chiffrement complet. Parce que la meilleure façon de comprendre une notion, c'est de la mettre en œuvre.</p>
-                <div class="tech-stack">
-                    <span>Python</span><span>Logique</span><span>Curiosité</span>
-                </div>
-                <div style="margin-top: 15px;">
-                    <button class="link-icon" style="margin:0;" data-modal-trigger data-modal-target="#modal-crypto">Voir le projet →</button>
-                </div>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="card-header" style="color: var(--text-main);">Esprit d'Aventure</div>
-                <h3>Spéléologie</h3>
-                <p>Des passions pratiquées lors de mes congés qui ont forgé mon caractère : gestion du risque, rigueur et sang-froid en milieu hostile.</p>
-                <div class="tech-stack">
-                    <span>Sécurité</span><span>Sang-froid</span><span>Rigueur</span>
-                </div>
-                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-sport">Mon état d'esprit →</button>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="card-header" style="color: var(--text-main);">Focus & Mental</div>
-                <h3>Musique</h3>
-                <p>Plus qu'un loisir, la musique est mon catalyseur de concentration. Elle me permet de maintenir une concentration constante sur les tâches complexes.</p>
-                <div class="tech-stack">
-                    <span>Deep Work</span><span>Motivation</span><span>Endurance</span>
-                </div>
-                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-music">Ma méthode de travail →</button>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="card-header" style="color: var(--text-main);">Culture Geek</div>
-                <h3>Jeux Vidéo & Cinéma</h3>
-                <p>Passionné par les univers immersifs (Horreur, Thriller). C'est mon moyen de décompresser et de partager des bons moments entre amis.</p>
-                <div class="tech-stack">
-                    <span>Détente</span><span>Immersion</span><span>Partage</span>
-                </div>
-                <button class="link-icon btn-modal-trigger" data-modal-target="#modal-gaming">Mes passions →</button>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="certifications" class="section">
-        <h2 class="section-title reveal">Certifications & Badges</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card reveal">
-                <div class="card-header">ANSSI</div>
-                <h3>MOOC SecNumacadémie</h3>
-                <p>Attestation validée le 25/01/2026 par l'ANSSI.</p>
-                <ul class="cert-list">
-                    <li>Authentification : <strong>94%</strong></li>
-                    <li>Sécurité Internet : <strong>94%</strong></li>
-                    <li>Poste de travail : <strong>92%</strong></li>
-                    <li>Panorama SSI : <strong>90%</strong></li>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Cisco · GNS3 · Packet Tracer</li>
+                    <li><i class="fas fa-check"></i> Linux (Debian / Ubuntu)</li>
+                    <li><i class="fas fa-check"></i> Windows Server</li>
+                    <li><i class="fas fa-check"></i> OSPF · BGP · VLANs</li>
+                    <li><i class="fas fa-check"></i> Proxmox · Virtualisation</li>
                 </ul>
-                <div class="tech-stack"><span>Cybersécurité</span></div>
-                <div class="cert-link"><a href="./assets/attestation-secnum.pdf" target="_blank" class="btn btn-outline small-btn">Voir l'attestation</a></div>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-icon sec"><i class="fas fa-shield-alt"></i></div>
+                <h3>Cybersécurité</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> TryHackMe · CTF</li>
+                    <li><i class="fas fa-check"></i> Wireshark · Analyse réseau</li>
+                    <li><i class="fas fa-check"></i> ACLs · Firewall · DMZ</li>
+                    <li><i class="fas fa-check"></i> ANSSI — SecNumacadémie</li>
+                    <li><i class="fas fa-check"></i> Tests d'intrusion (bases)</li>
+                </ul>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-icon dev"><i class="fas fa-code"></i></div>
+                <h3>Développement</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Python · Bash</li>
+                    <li><i class="fas fa-check"></i> Java (Sockets · Swing)</li>
+                    <li><i class="fas fa-check"></i> HTML · CSS · JavaScript</li>
+                    <li><i class="fas fa-check"></i> MariaDB · SQL</li>
+                    <li><i class="fas fa-check"></i> Automatisation & scripting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ PROJETS SAÉ ═══════ -->
+    <section id="projects" class="section section-alt">
+        <div class="section-label reveal">Projets académiques</div>
+        <h2 class="section-heading reveal">Mes SAÉ</h2>
+        <div class="projects-grid">
+
+            <div class="project-card reveal">
+                <div class="project-meta">
+                    <span class="project-tag">SAÉ 2.01</span>
+                    <div class="project-icons">
+                        <span title="Infrastructure"><i class="fas fa-server"></i></span>
+                        <span title="Sécurité"><i class="fas fa-lock"></i></span>
+                    </div>
+                </div>
+                <h3>Réseau de petite entreprise</h3>
+                <p>Infrastructure PME complète : LAN, DMZ, VLANs, ACLs, NAT/PAT et connectivité IPv4/IPv6 via FAI simulé sous Cisco.</p>
+                <div class="project-footer">
+                    <div class="project-chips">
+                        <span>Cisco</span><span>VLAN</span><span>ACL</span><span>DMZ</span>
+                    </div>
+                    <button class="btn-text btn-modal-trigger" data-modal-target="#modal-project1">Détails <i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
 
             <div class="project-card reveal">
-                <div class="card-header">CISCO NETACAD</div>
-                <h3>Introduction to Cybersecurity</h3>
-                <p>Validation des bases de la sécurité des réseaux.</p>
-                
-                <div style="display: flex; justify-content: center; margin: 15px 0;">
-                    <img src="./assets/img/cisco.png" alt="Badge Cisco Cyber" style="width: 150px; height: 150px; object-fit: contain;">
+                <div class="project-meta">
+                    <span class="project-tag">SAÉ 1.01</span>
+                    <div class="project-icons">
+                        <span title="Sécurité"><i class="fas fa-user-shield"></i></span>
+                    </div>
                 </div>
-                
-                <div class="tech-stack"><span>Défense</span><span>Réseau</span></div>
-                <div class="cert-link"><a href="./assets/certificat-cisco.pdf" target="_blank" class="btn btn-outline small-btn">Voir le certificat</a></div>
+                <h3>Hygiène informatique</h3>
+                <p>Stratégie de sensibilisation aux risques numériques : Social Engineering, gestion des mots de passe, chiffrement selon les recommandations ANSSI.</p>
+                <div class="project-footer">
+                    <div class="project-chips">
+                        <span>ANSSI</span><span>Phishing</span><span>Chiffrement</span>
+                    </div>
+                    <button class="btn-text btn-modal-trigger" data-modal-target="#modal-project2">Détails <i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
 
             <div class="project-card reveal">
-                <div class="card-header">Red Team</div>
-                <h3>Profil TryHackMe</h3>
-                <p>Entraînement actif aux tests d'intrusion et CTF.</p>
-                <div class="thm-badge-container">
-                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5663617" class="thm-iframe"></iframe>
+                <div class="project-meta">
+                    <span class="project-tag">SAÉ 3.02</span>
+                    <div class="project-icons">
+                        <span title="Java"><i class="fab fa-java"></i></span>
+                        <a href="https://github.com/HazelWeath/SAE_302_Developper_des_applications_communicantes.git" target="_blank" title="GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
-                <div class="tech-stack"><span>Pentest</span><span>CTF</span></div>
-                <div class="cert-link"><a href="https://tryhackme.com/p/naimghares" target="_blank" class="link-icon">Voir mon profil →</a></div>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="card-header">Numérique</div>
-                <h3>Certification Pix</h3>
-                <p>Développement des compétences numériques.</p>
-                <div class="pix-container">
-                     <div class="pix-circle"><span class="pix-score">589</span><span class="pix-label">Pix</span></div>
+                <h3>Messagerie instantanée Java</h3>
+                <p>Application chat Client/Serveur complète : Sockets TCP, multithreading, interface Swing, persistance MariaDB et hachage des mots de passe.</p>
+                <div class="project-footer">
+                    <div class="project-chips">
+                        <span>Java</span><span>Sockets TCP</span><span>Swing</span><span>MariaDB</span>
+                    </div>
+                    <button class="btn-text btn-modal-trigger" data-modal-target="#modal-project3">Détails <i class="fas fa-arrow-right"></i></button>
                 </div>
-                <div class="tech-stack"><span>Données</span><span>Sécurité</span></div>
             </div>
 
         </div>
     </section>
 
-    <section id="contact" class="section contact-section reveal">
-        <h2 class="section-title">Me Contacter</h2>
-        <p style="margin-bottom: 30px;">Un projet ou une proposition de stage ? Envoyez-moi un message.</p>
-        
-        <div class="contact-box">
-            <form action="https://formspree.io/f/xyzlggvo" method="POST" class="contact-form">
-                <input type="text" name="_gotcha" style="display:none">
+    <!-- ═══════ PROJETS PERSO ═══════ -->
+    <section id="side-projects" class="section">
+        <div class="section-label reveal">En dehors des cours</div>
+        <h2 class="section-heading reveal">Au-delà du code</h2>
+        <div class="side-grid">
 
-                <div class="form-group">
-                    <label for="name">Qui êtes-vous ?</label>
-                    <input type="text" id="name" name="name" placeholder="Votre Nom / Entreprise" required>
+            <div class="side-card reveal">
+                <div class="side-card-top">
+                    <div class="side-icon tech"><i class="fas fa-key"></i></div>
+                    <div class="side-links">
+                        <a href="https://github.com/HazelWeath/Projet_Chiffrement.git" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://naim-projet-chiffrement.netlify.app" target="_blank" title="Démo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
+                <h3>Projet Cryptographie</h3>
+                <p>Outil de chiffrement XOR avec clé tournante et encodage Base64. Python backend + démo web Vanilla JS hébergée sur Netlify.</p>
+                <button class="btn-text btn-modal-trigger" data-modal-target="#modal-crypto">En savoir plus <i class="fas fa-arrow-right"></i></button>
+            </div>
 
-                <div class="form-group">
-                    <label for="email">Votre Email</label>
-                    <input type="email" id="email" name="_replyto" placeholder="exemple@email.com" required>
+            <div class="side-card reveal">
+                <div class="side-card-top">
+                    <div class="side-icon sport"><i class="fas fa-mountain"></i></div>
                 </div>
+                <h3>Spéléologie & Escalade</h3>
+                <p>Rigueur, sang-froid et gestion du risque. Des disciplines qui ont forgé mon approche méthodique face aux problèmes complexes.</p>
+                <button class="btn-text btn-modal-trigger" data-modal-target="#modal-sport">Mon état d'esprit <i class="fas fa-arrow-right"></i></button>
+            </div>
 
-                <div class="form-group">
-                    <label for="subject">Objet de la demande</label>
-                    <select id="subject" name="_subject" required>
-                        <option value="" disabled selected>Sélectionnez un sujet...</option>
-                        <option value="Proposition de Stage / Alternance">Proposition de Stage / Alternance</option>
-                        <option value="Proposition de Mission">Proposition de Mission</option>
-                        <option value="Question sur un projet">Question technique / Projet</option>
-                        <option value="Autre demande">Autre / Prise de contact</option>
-                    </select>
+            <div class="side-card reveal">
+                <div class="side-card-top">
+                    <div class="side-icon music"><i class="fas fa-headphones"></i></div>
                 </div>
+                <h3>Musique & Deep Work</h3>
+                <p>La musique comme outil de concentration. Adapter son environnement sonore à la tâche pour entrer dans le flow et rester efficace.</p>
+                <button class="btn-text btn-modal-trigger" data-modal-target="#modal-music">Ma méthode <i class="fas fa-arrow-right"></i></button>
+            </div>
 
-                <div class="form-group">
-                    <label for="message">Votre Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Dites-m'en plus..." required></textarea>
+            <div class="side-card reveal">
+                <div class="side-card-top">
+                    <div class="side-icon gaming"><i class="fas fa-gamepad"></i></div>
                 </div>
+                <h3>Jeux Vidéo & Cinéma</h3>
+                <p>Univers immersifs, horreur et thriller. Dead by Daylight, Resident Evil, la saga Saw — pour décompresser et partager entre amis.</p>
+                <button class="btn-text btn-modal-trigger" data-modal-target="#modal-gaming">Mes passions <i class="fas fa-arrow-right"></i></button>
+            </div>
 
-                <button type="submit" class="btn btn-full">Envoyer le message</button>
-            </form>
         </div>
+    </section>
 
-        <div class="socials-footer">
-            <a href="https://github.com/HazelWeath" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/naïm-ghares-ab33693a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <!-- ═══════ CERTIFICATIONS ═══════ -->
+    <section id="certifications" class="section section-alt">
+        <div class="section-label reveal">Certifications</div>
+        <h2 class="section-heading reveal">Badges & Diplômes</h2>
+        <div class="certs-grid">
+
+            <div class="cert-card reveal">
+                <div class="cert-header">
+                    <div class="cert-org">ANSSI</div>
+                    <span class="cert-date">25 jan. 2026</span>
+                </div>
+                <h3>MOOC SecNumacadémie</h3>
+                <p>Attestation validée sur les 4 modules de l'ANSSI.</p>
+                <div class="cert-scores">
+                    <div class="score-row"><span>Authentification</span><div class="score-bar"><div class="score-fill" style="--w:94%"></div></div><b>94%</b></div>
+                    <div class="score-row"><span>Sécurité Internet</span><div class="score-bar"><div class="score-fill" style="--w:94%"></div></div><b>94%</b></div>
+                    <div class="score-row"><span>Poste de travail</span><div class="score-bar"><div class="score-fill" style="--w:92%"></div></div><b>92%</b></div>
+                    <div class="score-row"><span>Panorama SSI</span><div class="score-bar"><div class="score-fill" style="--w:90%"></div></div><b>90%</b></div>
+                </div>
+                <a href="./assets/attestation-secnum.pdf" target="_blank" class="btn btn-ghost cert-btn"><i class="fas fa-file-pdf"></i> Attestation</a>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-header"><div class="cert-org">Cisco Netacad</div></div>
+                <h3>Introduction to Cybersecurity</h3>
+                <p>Bases de la sécurité réseau — attaques, défenses et bonnes pratiques.</p>
+                <div class="cert-badge-wrap">
+                    <img src="./assets/img/cisco.png" alt="Badge Cisco Cybersecurity">
+                </div>
+                <a href="./assets/certificat-cisco.pdf" target="_blank" class="btn btn-ghost cert-btn"><i class="fas fa-certificate"></i> Certificat</a>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-header">
+                    <div class="cert-org">TryHackMe</div>
+                    <span class="cert-live"><i class="fas fa-circle"></i> Actif</span>
+                </div>
+                <h3>Profil Red Team</h3>
+                <p>Entraînement continu aux tests d'intrusion et CTF en environnement contrôlé.</p>
+                <div class="thm-container">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5663617" title="TryHackMe Badge"></iframe>
+                </div>
+                <a href="https://tryhackme.com/p/naimghares" target="_blank" class="btn btn-ghost cert-btn"><i class="fas fa-user"></i> Voir mon profil</a>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-header"><div class="cert-org">Pix</div></div>
+                <h3>Certification Pix</h3>
+                <p>Compétences numériques certifiées — données, sécurité, collaboration en ligne.</p>
+                <div class="pix-score-wrap">
+                    <div class="pix-ring">
+                        <span class="pix-num">589</span>
+                        <span class="pix-sub">Pix</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════ CONTACT ═══════ -->
+    <section id="contact" class="section">
+        <div class="section-label reveal">Contact</div>
+        <h2 class="section-heading reveal">Travaillons ensemble</h2>
+        <p class="section-sub reveal">Une proposition de stage, d'alternance ou une question ? Je réponds rapidement.</p>
+        <div class="contact-wrap">
+
+            <div class="contact-info reveal">
+                <h3>Disponible pour</h3>
+                <ul class="avail-list">
+                    <li><i class="fas fa-briefcase"></i> Stage ou alternance R&T / Cybersécurité</li>
+                    <li><i class="fas fa-comments"></i> Échanges sur des projets techniques</li>
+                    <li><i class="fas fa-handshake"></i> Collaboration et networking</li>
+                </ul>
+                <div class="contact-links">
+                    <a href="https://github.com/HazelWeath" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <div><span>GitHub</span><small>HazelWeath</small></div>
+                    </a>
+                    <a href="https://linkedin.com/in/naïm-ghares-ab33693a1" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <div><span>LinkedIn</span><small>Naïm Ghares</small></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap reveal">
+                <form action="https://formspree.io/f/xyzlggvo" method="POST" class="contact-form">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom / Entreprise</label>
+                            <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="_replyto" placeholder="jean@exemple.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Objet</label>
+                        <select id="subject" name="_subject" required>
+                            <option value="" disabled selected>Sélectionner...</option>
+                            <option value="Proposition de Stage / Alternance">Stage / Alternance</option>
+                            <option value="Proposition de Mission">Mission</option>
+                            <option value="Question sur un projet">Question technique</option>
+                            <option value="Autre demande">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-solid btn-full">Envoyer <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Naïm Ghares - BUT R&T</p>
+        <p>© 2026 Naïm Ghares &nbsp;·&nbsp; BUT R&T &nbsp;·&nbsp; Blois</p>
+        <div class="footer-links">
+            <a href="https://github.com/HazelWeath" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/naïm-ghares-ab33693a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </footer>
 
+    <!-- ═══════ MODALES ═══════ -->
     <div class="modal-overlay" id="modal-project1">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-header">
-                <h2>Infrastructure Réseau PME</h2>
-                <p class="subtitle">SAE 2.01 • Conception, Déploiement & Sécurisation</p>
-            </div>
-            <div class="modal-body">
-                <h3>Le Besoin (Situation)</h3>
-                <p>Une PME souhaitait refondre son infrastructure réseau pour intégrer une zone publique (DMZ) et sécuriser ses données internes, tout en assurant une connectivité IPv4/IPv6 via un FAI simulé.</p>
-                
-                <h3>Réalisations Techniques (Actions)</h3>
-                <ul>
-                    <li><strong>Segmentation (VLANs) :</strong> Isolation des flux (Admin, User, VoIP, Serveurs) pour limiter les domaines de diffusion.</li>
-                    <li><strong>Accès aux équipements :</strong> Mise en place de SSH sur les switchs et routeurs afin de pouvoir tout gérer depuis le PC Admin.</li>
-                    <li><strong>Sécurité (ACLs) :</strong> Filtrage strict des flux inter-VLANs et protection de la DMZ (Stateful Inspection simulée).</li>
-                    <li><strong>Services Réseaux :</strong> Déploiement de DHCP Relay, DNS et NAT/PAT.</li>
-                </ul>
-
-                <h3>Compétences du Référentiel</h3>
-                <div class="tech-stack" style="margin-top: 5px;">
-                    <span>Administrer (Niv. 2)</span> <span>Sécuriser (Niv. 2)</span>
-                </div>
-                
-
-                <div style="margin-top: 20px;">
-                    <a href="./assets/sae201.pdf" target="_blank" class="btn btn-outline">Voir le rapport technique</a>
-                </div>
-            </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">SAÉ 2.01</span>
+            <h2>Infrastructure Réseau PME</h2>
+            <p class="modal-sub">Conception, Déploiement & Sécurisation</p>
+            <div class="modal-section"><h4>Contexte</h4><p>Une PME souhaitait refondre son infrastructure pour intégrer une DMZ publique et sécuriser ses données internes, avec connectivité IPv4/IPv6 via un FAI simulé sous Cisco.</p></div>
+            <div class="modal-section"><h4>Réalisations</h4><ul>
+                <li><strong>Segmentation VLANs :</strong> Isolation des flux Admin, User, VoIP et Serveurs pour limiter les domaines de diffusion.</li>
+                <li><strong>SSH :</strong> Accès sécurisé à tous les équipements réseau depuis le PC Admin.</li>
+                <li><strong>ACLs :</strong> Filtrage strict des flux inter-VLANs et protection de la DMZ.</li>
+                <li><strong>Services réseau :</strong> DHCP Relay, DNS, NAT/PAT.</li>
+            </ul></div>
+            <div class="modal-chips"><span>Administrer Niv. 2</span><span>Sécuriser Niv. 2</span><span>Cisco IOS</span><span>IPv6</span></div>
+            <div class="modal-actions"><a href="./assets/sae201.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-pdf"></i> Rapport technique</a></div>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-project2">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-header">
-                <h2>Audit & Hygiène Informatique</h2>
-                <p class="subtitle">SAE 1.01 • Analyse de risques & Sensibilisation</p>
-            </div>
-            <div class="modal-body">
-                <h3>Le Besoin (Situation)</h3>
-                <p>Analyser les vecteurs d'attaques modernes ciblant les entreprises et proposer un plan d'action préventif pour limiter le facteur humain.</p>
-                
-                <h3>Réalisations Techniques (Actions)</h3>
-                <ul>
-                    <li><strong>Analyse de Menaces :</strong> Étude technique des Ransomwares et des vecteurs de Social Engineering (Phishing).</li>
-                    <li><strong>Conformité :</strong> Application des recommandations du guide d'hygiène de l'ANSSI.</li>
-                    <li><strong>Prévention :</strong> Rédaction de procédures pour la gestion des mots de passe (entropie) et le chiffrement des postes nomades.</li>
-                </ul>
-
-                <h3>Compétences du Référentiel</h3>
-                <div class="tech-stack" style="margin-top: 5px;">
-                    <span>Sécuriser (Niv. 1)</span> <span>Surveiller</span>
-                </div>
-                <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-muted);">
-                    <em>Sensibiliser aux vulnérabilités d'un système d'information.</em>
-                </p>
-
-                <div style="margin-top: 20px;">
-                    <a href="./assets/sae101.pdf" target="_blank" class="btn btn-outline">Support de prévention</a>
-                </div>
-            </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">SAÉ 1.01</span>
+            <h2>Audit & Hygiène Informatique</h2>
+            <p class="modal-sub">Analyse de risques & Sensibilisation</p>
+            <div class="modal-section"><h4>Contexte</h4><p>Analyser les vecteurs d'attaques modernes ciblant les entreprises et proposer un plan d'action préventif pour réduire le facteur humain.</p></div>
+            <div class="modal-section"><h4>Réalisations</h4><ul>
+                <li><strong>Analyse des menaces :</strong> Étude technique des ransomwares et du Social Engineering (Phishing).</li>
+                <li><strong>Conformité ANSSI :</strong> Application des recommandations du guide d'hygiène informatique.</li>
+                <li><strong>Prévention :</strong> Procédures pour la gestion des mots de passe (entropie) et le chiffrement des postes nomades.</li>
+            </ul></div>
+            <div class="modal-chips"><span>Sécuriser Niv. 1</span><span>ANSSI</span><span>Sensibilisation</span></div>
+            <div class="modal-actions"><a href="./assets/sae101.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-pdf"></i> Support de prévention</a></div>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-project3">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-             <div class="modal-header">
-                <h2>Messagerie Instantanée Sécurisée</h2>
-                <p class="subtitle">SAE 3.02 • Développement d'une architecture Client/Serveur</p>
-            </div>
-            <div class="modal-body">
-               <h3>Le Besoin (Situation)</h3>
-               <p>Concevoir et développer une application de communication temps réel permettant à plusieurs clients d'échanger des messages via un serveur centralisé, avec gestion de comptes et de groupes.</p>
-               
-               <h3>Réalisations Techniques (Actions)</h3>
-               <ul>
-                   <li><strong>Architecture Réseau :</strong> Implémentation de la communication via <strong>Sockets TCP</strong> en Java (multithreading pour gérer plusieurs clients simultanés).</li>
-                   <li><strong>Interface Graphique (GUI) :</strong> Création d'une interface complète en <strong>Java Swing</strong> (Connexion, Chat, Création de groupes, Liste des membres).</li>
-                   <li><strong>Base de Données :</strong> Persistance des utilisateurs et historique des messages via <strong>MariaDB</strong>.</li>
-                   <li><strong>Sécurité & Fonctionnalités :</strong> 
-                       <br>- Hachage des mots de passe côté client avant envoi.
-                       <br>- Vérification de complexité des mots de passe.
-                       <br>- Gestion de discussions éphémères (auto-suppression).
-                   </li>
-               </ul>
-
-               <h3>Compétences du Référentiel</h3>
-               <div class="tech-stack" style="margin-top: 5px;">
-                   <span>Programmer (Niv. 2)</span> <span>Connecter (Niv. 2)</span>
-               </div>
-               <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-muted);">
-                    <em>Maîtriser les sockets, la programmation objet et les bases de données.</em>
-                </p>
-
-                <div style="margin-top: 20px;">
-                    <a href="https://github.com/HazelWeath/SAE_302_Developper_des_applications_communicantes.git" target="_blank" class="btn btn-outline">Voir le code sur GitHub</a>
-                </div>
-            </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">SAÉ 3.02</span>
+            <h2>Messagerie Instantanée Java</h2>
+            <p class="modal-sub">Architecture Client/Serveur complète</p>
+            <div class="modal-section"><h4>Contexte</h4><p>Développer une application de chat temps réel multi-clients avec gestion de comptes, groupes de discussion et historique persistant.</p></div>
+            <div class="modal-section"><h4>Réalisations</h4><ul>
+                <li><strong>Sockets TCP :</strong> Multithreading Java pour gérer plusieurs clients simultanément.</li>
+                <li><strong>Interface Java Swing :</strong> Connexion, chat, création de groupes, liste des membres.</li>
+                <li><strong>MariaDB :</strong> Persistance des comptes utilisateurs et historique des messages.</li>
+                <li><strong>Sécurité :</strong> Hachage des mots de passe côté client, vérification de complexité, discussions éphémères auto-supprimées.</li>
+            </ul></div>
+            <div class="modal-chips"><span>Programmer Niv. 2</span><span>Connecter Niv. 2</span><span>Java</span><span>SQL</span></div>
+            <div class="modal-actions"><a href="https://github.com/HazelWeath/SAE_302_Developper_des_applications_communicantes.git" target="_blank" class="btn btn-ghost"><i class="fab fa-github"></i> Code source</a></div>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-crypto">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-header">
-                <h2>Projet : NaïmCipher</h2>
-                <p class="subtitle">Exploration pratique de la cryptographie symétrique</p>
-            </div>
-            <div class="modal-body">
-                <h3>Fonctionnement Technique</h3>
-                <p>L'algorithme repose sur trois couches de traitement pour garantir la confidentialité et la réversibilité :</p>
-                <ul>
-                    <li><strong>Cœur XOR (Exclusive OR) :</strong> Comparaison binaire bit à bit. C'est l'opération magique qui rend le chiffrement réversible (Message ^ Clé = Chiffré et inversement).</li>
-                    <li><strong>Clé Tournante (Rolling Key) :</strong> Utilisation du Modulo pour répéter la clé si le message est plus long qu'elle.</li>
-                    <li><strong>Encodage Base64 :</strong> Conversion du résultat binaire en caractères imprimables pour le web.</li>
-                </ul>
-
-                <h3>Full-Stack & Compatibilité</h3>
-                <p>Le projet démontre une interopérabilité totale :</p>
-                <ul>
-                    <li><strong>Backend :</strong> Script Python (3.8+).</li>
-                    <li><strong>Frontend :</strong> Interface web en Vanilla JS (Zéro dépendance) hébergée sur Netlify.</li>
-                </ul>
-
-                <div style="margin-top: 20px; display:flex; gap:10px; flex-wrap:wrap;">
-                    <a href="https://github.com/HazelWeath/Projet_Chiffrement.git" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Voir le Code</a>
-                    <a href="https://naim-projet-chiffrement.netlify.app" target="_blank" class="btn"><i class="fas fa-play"></i> Tester la Démo</a>
-                </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">Projet Perso</span>
+            <h2>NaïmCipher</h2>
+            <p class="modal-sub">Cryptographie symétrique — Python & JavaScript</p>
+            <div class="modal-section"><h4>Fonctionnement technique</h4><ul>
+                <li><strong>XOR :</strong> Opération bit à bit réversible — Message ^ Clé = Chiffré, et inversement.</li>
+                <li><strong>Rolling Key :</strong> Modulo pour répéter la clé sur des messages plus longs qu'elle.</li>
+                <li><strong>Base64 :</strong> Conversion du résultat binaire en caractères imprimables pour le web.</li>
+            </ul></div>
+            <div class="modal-section"><h4>Stack</h4><p><strong>Backend :</strong> Script Python 3.8+ &nbsp;·&nbsp; <strong>Frontend :</strong> Vanilla JS, hébergé sur Netlify.</p></div>
+            <div class="modal-chips"><span>Python</span><span>JavaScript</span><span>Cryptographie</span><span>Netlify</span></div>
+            <div class="modal-actions">
+                <a href="https://github.com/HazelWeath/Projet_Chiffrement.git" target="_blank" class="btn btn-ghost"><i class="fab fa-github"></i> Code source</a>
+                <a href="https://naim-projet-chiffrement.netlify.app" target="_blank" class="btn btn-solid"><i class="fas fa-play"></i> Démo live</a>
             </div>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-sport">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-header">
-                <h2>Spéléologie & Escalade</h2>
-                <p class="subtitle">L'école du terrain</p>
-            </div>
-            <div class="modal-body">
-                <h3>Pourquoi ces sports ?</h3>
-                <p>Je suis passionné par l'escalade et la spéléologie pour leur côté atypique. Ce sont des sports qui offrent un privilège rare : celui d'explorer des lieux inaccessibles au grand public (surtout en spéléologie).</p>
-                <p>Bien que mes études en BUT prennent aujourd'hui beaucoup de temps, je profite de mes congés pour pratiquer, notamment dans le sud de la France.</p>
-                
-                <h3>Ce qu'elles me permettent de développer</h3>
-                <ul>
-                    <li><strong>Pas d'improvisation :</strong> On ne part pas sans vérifier son matériel. Cette rigueur est transposable à la sécurité informatique.</li>
-                    <li><strong>Analyse de l'environnement :</strong> En escalade, il faut "lire" le mur avant de grimper pour anticiper ses mouvements.</li>
-                    <li><strong>Gestion du calme :</strong> Lors d'une descente dans une grotte, il faut savoir rester calme et ne pas perdre son sang-froid quoi qu'il arrive.</li>
-                </ul>
-                
-                <div style="margin-top:20px; text-align:center; color:var(--text-muted); font-style:italic;">
-                    "En spéléologie, la vérification du matériel est cruciale pour la sécurité, une rigueur comparable au contrôle des EPI en entreprise."
-                </div>
-            </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">Hors cadre</span>
+            <h2>Spéléologie & Escalade</h2>
+            <p class="modal-sub">L'école du terrain</p>
+            <div class="modal-section"><p>Je pratique l'escalade et la spéléologie lors de mes congés, notamment dans le sud de la France — des sports atypiques qui offrent le privilège d'explorer des endroits inaccessibles au grand public.</p></div>
+            <div class="modal-section"><h4>Ce que ça m'apporte</h4><ul>
+                <li><strong>Rigueur :</strong> On ne part pas sans vérifier son matériel — une discipline directement transposable à la sécurité informatique.</li>
+                <li><strong>Analyse :</strong> En escalade, on "lit" le mur pour anticiper ses mouvements avant d'agir.</li>
+                <li><strong>Sang-froid :</strong> En grotte, garder son calme quoi qu'il arrive est une nécessité absolue.</li>
+            </ul></div>
+            <blockquote class="modal-quote">"La vérification du matériel en spéléologie, c'est la même rigueur que les contrôles de sécurité en entreprise."</blockquote>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-music">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-header">
-                <h2>Exploration & Rythme</h2>
-                <p class="subtitle">La musique comme moteur de curiosité</p>
-            </div>
-            <div class="modal-body">
-                <h3>Une approche dynamique</h3>
-                <p>Je ne m'enferme pas dans des playlists figées. Comme en technologie, j'aime la découverte et le flux continu.</p>
-                
-                <h3>Ma méthode de travail</h3>
-                <ul>
-                    <li><strong>Adaptabilité :</strong> J'essaie d'adapter l'ambiance sonore à mon humeur et au type de tâche à accomplir.</li>
-                    <li><strong>Curiosité constante :</strong> Je laisse les algorithmes me faire découvrir de nouveaux artistes. C'est une forme de veille passive qui garde mon esprit ouvert à la nouveauté.</li>
-                    <li><strong>Le "Flow" :</strong> L'objectif est de créer une bulle de concentration pour être efficace et prendre du plaisir, même sur les tâches les plus ardues.</li>
-                </ul>
-                
-                <div style="margin-top: 25px;">
-                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:10px;"><em>Le type d'ambiance qui m'accompagne souvent :</em></p>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">Focus</span>
+            <h2>Musique & Concentration</h2>
+            <p class="modal-sub">Un outil de travail autant qu'un plaisir</p>
+            <div class="modal-section"><h4>Ma méthode</h4><ul>
+                <li><strong>Adaptabilité :</strong> J'adapte l'ambiance sonore au type de tâche et à l'humeur du moment.</li>
+                <li><strong>Curiosité passive :</strong> Les algorithmes me font découvrir de nouveaux artistes — une veille permanente qui garde l'esprit ouvert.</li>
+                <li><strong>Le "Flow" :</strong> Créer une bulle de concentration pour être efficace, même sur les tâches les plus ardues.</li>
+            </ul></div>
+            <div class="modal-section">
+                <p style="font-size:.85rem;color:var(--muted);margin-bottom:12px;font-style:italic;">Une playlist qui m'accompagne souvent :</p>
+                <iframe style="border-radius:10px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-gaming">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-header">
-                <h2>Culture Geek & Détente</h2>
-                <p class="subtitle">Mes centres d'intérêt pour décompresser</p>
-            </div>
-            <div class="modal-body">
-                <h3>L'importance de l'équilibre</h3>
-                <p>Pour rester efficace dans mes études et mes projets pro, j'ai besoin de vrais moments de déconnexion. Les univers immersifs du jeu vidéo et du cinéma sont ma façon préférée de "couper" après une journée chargée.</p>
-                
-                <h3>Jeux Vidéo</h3>
-                <p>Je suis un joueur régulier, principalement sur des jeux d'ambiance ou de coopération. J'apprécie particulièrement :</p>
-                <ul>
-                    <li><strong>Dead by Daylight :</strong> Pour les soirées entre amis et le côté stratégique du jeu en équipe.</li>
-                    <li><strong>Resident Evil :</strong> Pour l'histoire, l'univers marquant et le plaisir de suivre une aventure solo bien rythmée.</li>
-                </ul>
-
-                <h3>Cinéma</h3>
-                <p>Je suis friand de films à suspense et d'horreur psychologique. J'ai par exemple beaucoup aimé la saga <em>Saw</em>, surtout pour ses scénarios complexes (les fameux "plot twists") et le côté enquête policière qui tient en haleine, au-delà du simple frisson.</p>
-            </div>
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">Détente</span>
+            <h2>Jeux & Cinéma</h2>
+            <p class="modal-sub">Pour couper et recharger les batteries</p>
+            <div class="modal-section"><p>Les univers immersifs sont ma façon préférée de décompresser après une journée chargée. Et souvent, les partager entre amis rend le tout encore meilleur.</p></div>
+            <div class="modal-section"><h4>Jeux Vidéo</h4><ul>
+                <li><strong>Dead by Daylight :</strong> Soirées entre amis, stratégie d'équipe et tension constante.</li>
+                <li><strong>Resident Evil :</strong> L'histoire, l'univers marquant et le rythme de l'aventure solo.</li>
+            </ul></div>
+            <div class="modal-section"><h4>Cinéma</h4><p>Horreur psychologique et thriller. La saga <em>Saw</em> notamment, pour ses scénarios complexes et ses retournements de situation — bien au-delà du simple frisson.</p></div>
         </div>
     </div>
 
