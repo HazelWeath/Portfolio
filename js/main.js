@@ -65,20 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // ══════════════════════════════════════
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
+    const navbarEl = document.querySelector('.navbar');
+
+    function openMenu() {
+        burger.classList.add('open');
+        navLinks.classList.add('open');
+        navbarEl.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
+        navbarEl.classList.remove('menu-open');
+        document.body.style.overflow = '';
+    }
 
     burger?.addEventListener('click', () => {
-        const open = burger.classList.toggle('open');
-        navLinks.classList.toggle('open', open);
-        document.body.style.overflow = open ? 'hidden' : '';
+        burger.classList.contains('open') ? closeMenu() : openMenu();
     });
 
-    // Fermer au clic sur un lien
+    // Fermer au clic sur un lien ou bouton
     navLinks?.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('click', () => {
-            burger.classList.remove('open');
-            navLinks.classList.remove('open');
-            document.body.style.overflow = '';
-        });
+        el.addEventListener('click', closeMenu);
     });
 
     // ══════════════════════════════════════

@@ -77,7 +77,7 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
 
 /* =========================================
-   FOND ANIMÉ — ORBES
+   FOND — GRILLE + ZONES DIAGONALES
    ========================================= */
 .bg-orbs {
     position: fixed;
@@ -87,67 +87,92 @@ img { max-width: 100%; display: block; }
     pointer-events: none;
 }
 
-.orb {
+/* Grille de lignes nette et bien visible */
+.bg-orbs::before {
+    content: '';
     position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.45;
-    animation: orbFloat linear infinite;
+    inset: -100px; /* déborde pour éviter les bords blancs */
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 52px 52px;
+    animation: gridDrift 40s linear infinite;
 }
 
-/* Orbe principale — orange chaud */
+/* Zone colorée haut-droit — coin en biseau */
+.bg-orbs::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 55vw; height: 60vh;
+    background: linear-gradient(
+        215deg,
+        rgba(232, 98, 12, 0.13) 0%,
+        rgba(251, 146, 60, 0.07) 35%,
+        transparent 65%
+    );
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+}
+
+/* Zone colorée bas-gauche */
 .orb-1 {
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(232,98,12,0.22) 0%, rgba(255,140,60,0.10) 50%, transparent 80%);
-    top: -160px; right: -80px;
-    animation-duration: 22s;
-    animation-delay: 0s;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 45vw; height: 50vh;
+    background: linear-gradient(
+        35deg,
+        rgba(232, 98, 12, 0.10) 0%,
+        rgba(251, 146, 60, 0.05) 40%,
+        transparent 70%
+    );
+    clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
 }
 
-/* Orbe secondaire — pêche / beige */
-.orb-2 {
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(255,185,100,0.16) 0%, rgba(240,160,80,0.08) 50%, transparent 80%);
-    bottom: 10%; left: -100px;
-    animation-duration: 28s;
-    animation-delay: -10s;
+/* Masquage des autres orbs non utilisées */
+.orb-2, .orb-3 { display: none; }
+
+:root {
+    --grid-line: rgba(232, 98, 12, 0.12);
+}
+body.dark {
+    --grid-line: rgba(232, 98, 12, 0.16);
+}
+body.dark .bg-orbs::after {
+    background: linear-gradient(
+        215deg,
+        rgba(232, 98, 12, 0.18) 0%,
+        rgba(251, 146, 60, 0.10) 35%,
+        transparent 65%
+    );
+}
+body.dark .orb-1 {
+    background: linear-gradient(
+        35deg,
+        rgba(232, 98, 12, 0.14) 0%,
+        rgba(251, 146, 60, 0.07) 40%,
+        transparent 70%
+    );
 }
 
-/* Orbe tertiaire — ambre très doux */
-.orb-3 {
-    width: 360px; height: 360px;
-    background: radial-gradient(circle, rgba(200,120,40,0.12) 0%, transparent 70%);
-    top: 55%; right: 20%;
-    animation-duration: 18s;
-    animation-delay: -6s;
-}
-
-body.dark .orb-1 { opacity: 0.30; }
-body.dark .orb-2 { opacity: 0.22; }
-body.dark .orb-3 { opacity: 0.18; }
-
-@keyframes orbFloat {
-    0%   { transform: translate(0, 0) scale(1); }
-    25%  { transform: translate(30px, 20px) scale(1.04); }
-    50%  { transform: translate(10px, 45px) scale(0.97); }
-    75%  { transform: translate(-20px, 15px) scale(1.02); }
-    100% { transform: translate(0, 0) scale(1); }
+@keyframes gridDrift {
+    0%   { background-position: 0 0, 0 0; }
+    100% { background-position: 52px 52px, 52px 52px; }
 }
 
 /* =========================================
    NAVBAR
    ========================================= */
 .navbar {
-    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1010;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 22px 6%;
-    transition: all .3s ease;
+    padding: 20px 6%;
+    transition: padding .3s ease, box-shadow .3s ease;
+    background: var(--bg-nav);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 .navbar.scrolled {
-    padding: 14px 6%;
-    background: var(--bg-nav);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    padding: 13px 6%;
     border-bottom: 1px solid var(--border);
     box-shadow: var(--sh-sm);
 }
@@ -1049,23 +1074,19 @@ footer {
     .hero-desc { margin: 0 auto 32px; }
     .hero-actions, .hero-social { justify-content: center; }
     .photo-frame img { width: 220px; height: 260px; }
-    .photo-frame::before { border-radius: 27px; }
 
     /* ── À propos ── */
     .about-inner { grid-template-columns: 1fr; gap: 32px; }
     .about-aside { padding-top: 0; }
     .about-text p { max-width: 100%; }
 
-    /* ── Timeline — passe en 2 colonnes dot + carte ── */
+    /* ── Timeline : dot + carte ── */
     .timeline::before { left: 19px; }
-    .tl-item {
-        grid-template-columns: 40px 1fr;
-        grid-template-rows: auto;
-    }
+    .tl-item { grid-template-columns: 40px 1fr; gap: 0; }
     .tl-left { display: none; }
-    .tl-connector { padding-top: 18px; }
-    .tl-dot { width: 28px; height: 28px; font-size: .7rem; }
-    .tl-card { margin-left: 10px; padding: 16px 18px; }
+    .tl-connector { padding-top: 16px; justify-content: flex-start; }
+    .tl-dot { width: 28px; height: 28px; font-size: .68rem; flex-shrink: 0; }
+    .tl-card { margin-left: 14px; padding: 16px 18px; }
 
     /* ── Grilles ── */
     .skills-grid, .projects-grid { grid-template-columns: 1fr; }
@@ -1073,60 +1094,104 @@ footer {
     .contact-wrap { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
 
-    /* ── Nav mobile — plein écran ── */
-    .nav-links {
-        position: fixed; inset: 0;
-        background: var(--bg);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        transform: translateX(100%);
-        transition: transform .4s cubic-bezier(.7,0,.3,1);
-        z-index: 998;
-        padding: 40px 20px;
-    }
-    .nav-links.open { transform: translateX(0); }
+    /* ─────────────────────────────────
+       NAV MOBILE
+       La navbar elle-même passe plein
+       écran quand .menu-open — évite
+       tout conflit de stacking context.
+    ───────────────────────────────── */
+    .burger { display: flex; }
 
-    /* Tous les liens de nav en mobile */
-    .nav-links li { width: 100%; max-width: 260px; text-align: center; }
+    /* nav-links caché par défaut */
+    .nav-links {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Navbar normale sur mobile */
+    .navbar {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* Navbar en mode menu ouvert = plein écran */
+    .navbar.menu-open {
+        height: 100dvh; /* dynamic viewport height — évite les bugs iOS */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 20px 6%;
+        overflow-y: auto;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    /* Dans menu-open : logo + burger restent sur la 1ère ligne */
+    .navbar.menu-open .logo,
+    .navbar.menu-open .burger { flex-shrink: 0; }
+
+    /* Ligne du haut logo/burger en mode ouvert */
+    .navbar.menu-open::before {
+        content: '';
+        display: none; /* pas nécessaire, juste pour clarté */
+    }
+
+    /* nav-links visible quand menu ouvert */
+    .navbar.menu-open .nav-links {
+        display: flex;
+        opacity: 1;
+        pointer-events: all;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        flex: 1;
+        justify-content: center;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    /* Items */
+    .nav-links li {
+        width: 100%;
+        max-width: 300px;
+    }
     .nav-links a {
         display: block;
-        font-size: 1rem;
+        width: 100%;
+        font-size: 1.05rem;
         font-weight: 500;
         padding: 13px 20px;
         border-radius: var(--r-sm);
-        color: var(--text);
+        color: var(--muted);
+        text-align: center;
         background: transparent;
-        width: 100%;
     }
-    .nav-links a:hover { background: var(--bg-alt); }
-    .nav-links a.active-nav { color: var(--accent); }
+    .nav-links a:hover,
+    .nav-links a.active-nav { color: var(--text); background: var(--bg-alt); }
 
-    /* CTA "Contact" en mobile — gardé orange mais adapté */
-    .nav-links .nav-cta {
+    /* CTA Contact */
+    .nav-cta {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
         background: var(--accent) !important;
         color: #fff !important;
         border-radius: var(--r-sm) !important;
-        margin-top: 8px;
         padding: 13px 20px !important;
+        margin-top: 4px;
+        font-weight: 600 !important;
     }
-    .nav-links .nav-cta:hover { opacity: .9; }
+    .nav-cta:hover { opacity: .9 !important; transform: none !important; box-shadow: none !important; }
 
-    /* Bouton thème en mobile */
+    /* Bouton thème */
     .nav-links li:last-child {
         display: flex;
         justify-content: center;
         margin-top: 8px;
     }
-    .theme-btn {
-        width: 40px; height: 40px;
-        border-radius: 50%;
-    }
+    .theme-btn { width: 42px; height: 42px; font-size: .9rem; }
 
-    .burger { display: flex; z-index: 999; }
-
-    /* back-to-top plus discret sur mobile */
     .back-top { bottom: 20px; right: 16px; width: 38px; height: 38px; }
 }
 
@@ -1143,6 +1208,5 @@ footer {
         margin-bottom: -80px;
     }
     footer { flex-direction: column; gap: 12px; text-align: center; }
-    /* Score bars plus compactes */
     .score-row { grid-template-columns: 1fr 70px 30px; gap: 6px; }
 }
