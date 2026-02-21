@@ -53,7 +53,7 @@ body.dark {
    RESET
    ========================================= */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
     font-family: var(--font);
@@ -1193,6 +1193,16 @@ footer {
     .theme-btn { width: 42px; height: 42px; font-size: .9rem; }
 
     .back-top { bottom: 20px; right: 16px; width: 38px; height: 38px; }
+
+    /* Sécurité débordement tablette */
+    .hero-inner, .about-inner, .timeline,
+    .skills-grid, .projects-grid, .side-grid,
+    .certs-grid, .contact-wrap {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .tl-card, .project-card, .skill-block,
+    .cert-card, .side-card { min-width: 0; word-break: break-word; }
 }
 
 @media (max-width: 580px) {
@@ -1202,11 +1212,31 @@ footer {
     .contact-form { padding: 20px; }
     .modal-box { padding: 26px 20px; }
     .modal-actions { flex-direction: column; }
+
+    /* iframe TryHackMe — trop large, on la réduit */
+    .thm-container { overflow: hidden; width: 100%; }
     .thm-container iframe {
-        transform: scale(.64);
-        transform-origin: top center;
-        margin-bottom: -80px;
+        width: 100%;
+        max-width: 100%;
+        transform: scale(.62);
+        transform-origin: top left;
+        margin-bottom: -88px;
     }
+
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .score-row { grid-template-columns: 1fr 70px 30px; gap: 6px; }
+
+    /* Sécurité globale : rien ne dépasse */
+    img, iframe, video, table { max-width: 100%; }
+    .project-card, .skill-block, .cert-card, .side-card,
+    .tl-card, .about-card, .contact-form, .modal-box {
+        min-width: 0;
+        word-break: break-word;
+    }
+    /* Chips de tags — retour à la ligne autorisé */
+    .project-chips, .tl-tags, .modal-chips { flex-wrap: wrap; }
+    /* Badges photo — rentrés sur petit écran */
+    .photo-badge { display: none; }
+    /* Score bar label raccourci */
+    .score-row span { font-size: .72rem; }
 }
