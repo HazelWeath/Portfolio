@@ -1,9 +1,5 @@
 # Portfolio Personnel - Naïm Ghares
 
-![Statut](https://img.shields.io/badge/Status-En%20Ligne-success?style=flat-square)
-![Etudiant](https://img.shields.io/badge/%C3%89tudiant-BUT%20R%26T-blue?style=flat-square)
-![Focus](https://img.shields.io/badge/Focus-R%C3%A9seaux%20%26%20Cyber-orange?style=flat-square)
-
 Bienvenue sur le dépôt GitHub de mon portfolio personnel.
 Ce projet a été conçu "From Scratch" (sans framework lourd) pour présenter mon parcours d'étudiant en **BUT Réseaux & Télécommunications**, mes projets techniques (SAÉ) et mes compétences en administration système et cybersécurité.
 
