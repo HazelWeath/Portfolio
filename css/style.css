@@ -883,6 +883,31 @@ footer {
 }
 
 .modal-section { margin-bottom: 18px; }
+
+/* Section compétences — mise en valeur distincte */
+.modal-section.competences {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-mid);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--r-sm);
+    padding: 14px 16px;
+}
+.modal-section.competences h4 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.modal-section.competences ul li {
+    font-size: .84rem;
+    color: var(--text);
+    padding-left: 0;
+}
+.modal-section.competences ul li::before { display: none; }
+.modal-section.competences strong {
+    font-family: var(--font-h);
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: 4px;
+}
 .modal-section h4 {
     font-family: var(--font-h);
     font-size: .83rem; font-weight: 700;

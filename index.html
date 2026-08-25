@@ -101,8 +101,8 @@
     <section id="about" class="section about-section">
         <div class="about-inner">
             <div class="about-text reveal">
-                <div class="section-label">À propos</div>
-                <h2 class="section-heading">Qui je suis</h2>
+                <div class="section-label">À propos de moi</div>
+                <h2 class="section-heading">Qui suis-je</h2>
                 <p>
                     Je m'appelle Naïm, j'ai 20 ans et je suis en BUT Réseaux & Télécoms à l'IUT de Blois.
                     Ce qui me motive c'est de comprendre comment les choses fonctionnent,
@@ -179,6 +179,7 @@
                     <h3>Chargé d'Affaires</h3>
                     <p>En tant que chargé d'affaires, je réalise des projets de modification du réseau Orange côté OI (Opérateur d'Infrastructure) afin de résoudre des problématiques avec des solutions techniquement réalisables et avec un coût le plus avantageux possible pour Orange — ce sont des solutions technico-économiques.</p>
                     <div class="tl-tags"><span>Architecture Réseau</span><span>Terrain</span><span>Gestion de projets</span></div>
+                    <button class="btn-text btn-modal-trigger" data-modal-target="#modal-orange" style="margin-top:12px;">Détails <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="tl-item reveal">
@@ -189,6 +190,7 @@
                     <h3>BUT Réseaux & Télécoms</h3>
                     <p>En intégrant l'IUT de Blois dans la filière R&T, j'apprends à développer certaines compétences techniques, que ce soit en réseaux, en codage ou en sécurité informatique. Cependant, cette formation nous apprend quelque chose de plus important : la recherche et la curiosité, le fait de vouloir tout comprendre et de savoir où chercher les informations.</p>
                     <div class="tl-tags"><span>Système d'exploitation</span><span>Codage</span><span>Réseaux</span><span>Sécurité informatique</span></div>
+                    <button class="btn-text btn-modal-trigger" data-modal-target="#modal-iut" style="margin-top:12px;">Détails <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="tl-item reveal">
@@ -517,6 +519,14 @@
                 <li><strong>ACLs :</strong> Filtrage précis des communications entre VLANs et protection de la DMZ.</li>
                 <li><strong>Services :</strong> DHCP, DNS, NAT/PAT configurés et fonctionnels.</li>
             </ul></div>
+            <div class="modal-section competences"><h4>Compétences développées</h4><ul>
+                <li><strong>AC11.03</strong> — Configurer les fonctions de base du réseau local (VLANs, DHCP, DNS)</li>
+                <li><strong>AC11.04</strong> — Maîtriser les rôles et principes fondamentaux des systèmes d'exploitation pour la configuration des équipements</li>
+                <li><strong>AC21.01</strong> — Configurer et dépanner le routage dans un réseau (routage inter-VLAN, connectivité IPv4/IPv6)</li>
+                <li><strong>AC21.02</strong> — Configurer une politique de sécurité simple : ACLs, protection de la DMZ</li>
+                <li><strong>AC21.04</strong> — Déployer des services réseau avancés : DHCP, DNS, NAT/PAT</li>
+                <li><strong>AC21.05</strong> — Identifier les réseaux opérateurs et l'architecture d'Internet (FAI simulé)</li>
+            </ul></div>
             <div class="modal-chips"><span>Administrer</span><span>Sécuriser</span><span>Cisco IOS</span><span>IPv4</span><span>IPv6</span></div>
             <div class="modal-actions"><a href="./assets/sae201.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-pdf"></i> Rapport technique</a></div>
         </div>
@@ -525,14 +535,19 @@
     <div class="modal-overlay" id="modal-project2">
         <div class="modal-box">
             <button class="modal-close"><i class="fas fa-times"></i></button>
-            <span class="modal-label">SSensibilisation a L'Hygiène informatique</span>
+            <span class="modal-label">Sensibilisation à l'hygiène informatique</span>
             <h2>Audit & Hygiène Informatique</h2>
             <p class="modal-sub">Analyse de risques & Sensibilisation</p>
             <div class="modal-section"><h4>Contexte</h4><p>Identifier les vecteurs d'attaques qui ciblent les entreprises, principalement via le facteur humain et proposer des mesures concrètes pour y répondre.</p></div>
             <div class="modal-section"><h4>Ce que j'ai fait</h4><ul>
-                <li><strong>Analyse des menaces :</strong> Recherches sur les différents type de menaces et de moyens de s'en protèger.</li>
+                <li><strong>Analyse des menaces :</strong> Recherches sur les différents types de menaces et de moyens de s'en protéger.</li>
                 <li><strong>Référentiel ANSSI :</strong> Application des recommandations du guide d'hygiène informatique.</li>
                 <li><strong>Procédures :</strong> Bonnes pratiques comme pour les mots de passe.</li>
+            </ul></div>
+            <div class="modal-section competences"><h4>Compétences développées</h4><ul>
+                <li><strong>AC11.02</strong> — Comprendre les fondements des systèmes numériques et de l'Internet (nécessaire pour analyser les vecteurs d'attaque)</li>
+                <li><strong>AC11.05</strong> — Identifier les dysfonctionnements et vulnérabilités d'un système d'information et savoir les signaler</li>
+                <li><strong>AC12.05</strong> — Communiquer avec un tiers et adapter son discours à son interlocuteur (vulgarisation et sensibilisation)</li>
             </ul></div>
             <div class="modal-chips"><span>Sécuriser</span><span>ANSSI</span><span>Sensibilisation</span></div>
             <div class="modal-actions"><a href="./assets/sae101.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-pdf"></i> Support de prévention</a></div>
@@ -542,7 +557,7 @@
     <div class="modal-overlay" id="modal-project3">
         <div class="modal-box">
             <button class="modal-close"><i class="fas fa-times"></i></button>
-            <span class="modal-label">Création d'un messagerie en Java</span>
+            <span class="modal-label">Création d'une messagerie en Java</span>
             <h2>Messagerie Instantanée Java</h2>
             <p class="modal-sub">Architecture Client/Serveur complète</p>
             <div class="modal-section"><h4>Contexte</h4><p>Développer une application de messagerie complète en Java — plusieurs clients connectés en temps réel à un serveur, avec gestion de comptes, groupes et historique.</p></div>
@@ -551,6 +566,14 @@
                 <li><strong>Interface Swing :</strong> Connexion, chat, création de groupes, affichage des membres connectés.</li>
                 <li><strong>Base de données MariaDB :</strong> Stockage des comptes et historique des messages.</li>
                 <li><strong>Sécurité :</strong> Mots de passe hachés côté client, vérification de complexité, discussions éphémères.</li>
+            </ul></div>
+            <div class="modal-section competences"><h4>Compétences développées</h4><ul>
+                <li><strong>AC13.03</strong> — Traduire un algorithme dans un langage et pour un environnement donné (implémentation Java)</li>
+                <li><strong>AC13.05</strong> — Choisir les mécanismes de gestion de données adaptés à l'outil (choix de MariaDB)</li>
+                <li><strong>AC13.06</strong> — S'intégrer dans un environnement de développement collaboratif (travail en groupe de trois)</li>
+                <li><strong>AC21.06</strong> — Travailler en équipe pour développer ses compétences professionnelles</li>
+                <li><strong>AC23.03</strong> — Utiliser un protocole réseau pour programmer une application client/serveur (Sockets TCP)</li>
+                <li><strong>AC23.04</strong> — Installer et administrer un système de gestion de données (MariaDB)</li>
             </ul></div>
             <div class="modal-chips"><span>Java</span><span>SQL</span></div>
             <div class="modal-actions"><a href="https://github.com/HazelWeath/SAE_302_Developper_des_applications_communicantes.git" target="_blank" class="btn btn-ghost"><i class="fab fa-github"></i> Code source</a></div>
@@ -585,9 +608,9 @@
             <p class="modal-sub">L'école du terrain</p>
             <div class="modal-section"><p>Ce sont les sports que je préfère. Je ne pratique plus l'escalade de manière régulière, mais je fais au maximum pour faire des activités de ce type, notamment lors de mes vacances. Ces sports, qui ne sont pas si communs, m'apprennent à garder mon calme dans certaines situations et me permettent de décompresser pendant mes congés.</p></div>
             <div class="modal-section"><h4>Ce que j'en retire</h4><ul>
-                <li><strong>Rigueur :</strong> Il faut bien sur sistématiquement vérifier l'équipement pour évité les risques inutiles.</li>
+                <li><strong>Rigueur :</strong> Il faut bien sûr systématiquement vérifier l'équipement pour éviter les risques inutiles.</li>
                 <li><strong>Lecture de la situation :</strong> En escalade, il est nécessaire d'analyser la voie avant de grimper pour optimiser ses prises et économiser ses forces.</li>
-                <li><strong>Sang-froid :</strong> C'est une expérience qui peu être stessante, cela dépend aussi des gens mais le fait de pratiquer cette activité permet d'apprendre a mieux garder sont calme dans certaines situations.</li>
+                <li><strong>Sang-froid :</strong> C'est une expérience qui peut être stressante, cela dépend aussi des gens, mais le fait de pratiquer cette activité permet d'apprendre à mieux garder son calme dans certaines situations.</li>
             </ul></div>
         </div>
     </div>
@@ -637,11 +660,87 @@
             </div>
             <div class="modal-section">
                 <h4>Comment ça fonctionne</h4>
-                <p>J'ai utilisé une application spéciale pour créer des curseur sous forme de pixel art pour windows. Toute les explications pour savoir comment l'utilisé sont sur mon GitHub</p>
+                <p>J'ai utilisé une application spéciale pour créer des curseurs sous forme de pixel art pour Windows. Toutes les explications pour savoir comment l'utiliser sont sur mon GitHub.</p>
             </div>
             <div class="modal-chips"><span>Pour le fun</span></div>
             <div class="modal-actions">
                 <a href="https://github.com/HazelWeath/curseur_chat" target="_blank" class="btn btn-ghost"><i class="fab fa-github"></i> Voir sur GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE ORANGE -->
+    <div class="modal-overlay" id="modal-orange">
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">Alternance — En cours</span>
+            <h2>Orange</h2>
+            <p class="modal-sub">Chargé d'Affaires</p>
+
+            <div class="modal-section">
+                <h4>L'entreprise</h4>
+                <p>Orange est l'un des principaux opérateurs de télécommunications en France et dans le monde. En tant qu'OI, Orange est responsable du déploiement et de la maintenance de l'infrastructure physique du réseau  (les câbles, les armoires, les équipements,...) sur laquelle les opérateurs commerciaux s'appuient pour fournir leurs services aux clients.</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>Le métier de chargé d'affaires</h4>
+                <p>Mon rôle est de répondre à une demande client pour que son projet puisse être réalisé sans que l'infrastructure opérateur ne le dérange lors de ses travaux. Je dois donc analyser la demande, trouver une solution technique à la demande du client et modifier l'infrastructure du réseau d'Orange.</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>Bilan technique</h4>
+                <ul>
+                    <li> — Comprendre l'architecture des réseaux opérateurs</li>
+                    <li> — Utilisation de divers outils tels que des outils de cartographie ou plus simplement les outils du pack Office</li>
+                    <li> — Analyse technico-économique pour trouver le juste milieu entre techniques utilisées et coût des projets</li>
+                    <li> — Vulgarisation scientifique car il faut savoir expliquer différents éléments techniques à des personnes qui ne s'y connaissent pas</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h4>Ce que ça m'a apporté — Bilan personnel</h4>
+                <ul>
+                    <li><strong>Autonomie :</strong> Il faut savoir gérer un dossier de bout en bout.</li>
+                    <li><strong>Adaptabilité :</strong> Chaque projet est différent, que ce soit au niveau des contraintes techniques ou même des clients.</li>
+                    <li><strong>Communication professionnelle :</strong> Il faut adapter notre manière de parler en fonction de nos interlocuteurs.</li>
+                    <li><strong>Connaissances :</strong> Au-delà de l'aspect purement technique, toutes les connaissances que j'ai acquises au cours de cette alternance me sont bénéfiques dans mon développement et peuvent m'être utiles aussi bien pour mes futures expériences professionnelles que dans la vie de tous les jours.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE IUT -->
+    <div class="modal-overlay" id="modal-iut">
+        <div class="modal-box">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <span class="modal-label">Formation — En cours</span>
+            <h2>IUT de Blois</h2>
+            <p class="modal-sub">BUT Réseaux & Télécommunications · Université de Tours</p>
+
+            <div class="modal-section">
+                <h4>La formation</h4>
+                <p>Le BUT R&T couvre un large spectre : architecture réseau, systèmes d'exploitation, téléphonie, analyse des signaux et cybersécurité. La pédagogie repose en grande partie sur les SAÉ (Situations d'Apprentissage et d'Évaluation) — des projets concrets à réaliser en équipe ou seul, qui forcent à appliquer ce qu'on apprend plutôt que de simplement l'assimiler.</p>
+            </div>
+
+            <div class="modal-section competences">
+                <h4>Ce que ça m'a apporté — Bilan technique</h4>
+                <ul>
+                    <li><strong>AC11.03 / AC21.01</strong> — Configurer et administrer des réseaux, du LAN aux protocoles de routage dynamique</li>
+                    <li><strong>AC11.04</strong> — Maîtriser les bases des systèmes d'exploitation Linux et Windows Server</li>
+                    <li><strong>AC23.03</strong> — Développer des applications réseau en Java (client/serveur via sockets TCP)</li>
+                    <li><strong>AC21.02</strong> — Mettre en place des politiques de sécurité : ACLs, DMZ, pare-feu</li>
+                    <li><strong>AC23.04</strong> — Administrer des bases de données relationnelles (MariaDB)</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h4>Ce que ça m'a apporté — Bilan personnel</h4>
+                <ul>
+                    <li><strong>Curiosité et méthode :</strong> La formation m'a appris à chercher par moi-même. Savoir où trouver l'information est souvent plus utile que de la mémoriser.</li>
+                    <li><strong>Travail en équipe :</strong> Les SAÉ en groupe m'ont confronté aux contraintes réelles de la collaboration — organisation, communication, gestion des désaccords.</li>
+                    <li><strong>Rigueur :</strong> En réseau comme en sécurité, une erreur de configuration peut tout faire tomber. Ça apprend à être précis et méthodique.</li>
+                    <li><strong>Prise de recul :</strong> Alterner cours théoriques et projets pratiques m'a permis de comprendre pourquoi on apprend ce qu'on apprend — et pas juste comment l'appliquer.</li>
+                </ul>
             </div>
         </div>
     </div>
